@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Introduction (Lecture #1) - Python Basics</title>
+
+    <meta name="author" content="Noam Elfanbaum">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="revealjs/css/reveal.css">
+    <link rel="stylesheet" href="revealjs/css/theme/black.css" id="theme">
+<!--    <link rel="stylesheet" href="css/my.css">-->
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+            <section data-background="img/monty-python.jpg">
+                <h1>Introduction</h1>
+
+                <h3>Python basics - lecture #1</h3>
+                <p>
+                    <small><a href="http://thespoon.ghost.io">Noam Elfanbaum</a>/<a href="http://twitter.com/noamelf">@noamelf</a></small>
+                </p>
+                <aside class="notes">
+				    <ul>
+                        <li>Name and your first experience with a computer</li>
+                        <li>Class schdule</li>    
+                    </ul>
+				</aside>
+            </section>
+            
+            <section>
+                <h3>About</h3>
+                <ul>
+                    <li class="fragment">Guido Van-Rossum side project in the late 1980's</li>
+                    <li class="fragment">Called after the Monty Python (comedy) group</li>
+                    <li class="fragment">Community-driven</li>
+                    <li class="fragment">Can be found on almost every platform and every field</li>
+                    <li class="fragment">Easy to extend using C and package system</li>
+                    <li class="fragment">2 main versions: Python2 and Python3</li>
+                    <li class="fragment">Beautiful</li>
+                </ul>
+            </section>
+            
+            
+            <section>
+                <h4>Java</h4>
+                <pre><code class="java" data-trim contenteditable>
+public class Hello{
+  public static void main(String[] args){
+    System.out.println("Hello, world!");
+  }
+}
+                </code></pre>
+            </section>
+            
+            
+            <section>
+                <h4>C++</h4>
+                <pre><code class="c" data-trim contenteditable>
+#include &lt;iostream&gt;
+
+int main(){
+  std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
+  return 0;
+}
+            </code></pre>
+            </section>
+            
+            
+            <section>
+                <h4>Python</h4>
+
+                <pre><code class="python" data-trim contenteditable>
+print('Hello World!')
+                </code></pre>
+            </section>
+            
+            
+            <section data-background="http://i.giphy.com/bE5qi2tiSfdZu.gif"></section>
+            
+            <section>
+                <h3>Philosophy</h3>
+                <ul>
+                    <li class="fragment">The Zen of Python:
+                        <ul>
+                            <li class="fragment">Beautiful is better than ugly</li>
+                            <li class="fragment">Explicit is better than implicit</li>
+                            <li class="fragment">Simple is better than complex</li>
+                            <li class="fragment">Complex is better than complicated</li>
+                            <li class="fragment">Readability Counts</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Other ideas
+                        <ul>
+                            <li class="fragment">There should be one obvious way to do it</li>
+                            <li class="fragment">Clarity over speed</li>
+                            <li class="fragment">We’re all consenting adults here</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+            <section>
+                <h2>Python qualities</h2>
+                <ul>
+                    <li class="fragment">Compromise between shell script and C++/Java program</li>
+                    <li class="fragment">Intuitive syntax</li>
+                    <li class="fragment">Interpreted</li>
+                    <li class="fragment">Dynamically typed</li>
+                    <li class="fragment">High-level data types</li>
+                    <li class="fragment">Slower than lower level languages</li>
+                </ul>
+            </section>
+            
+            
+            <section>
+                <h2>Interpreted?</h2>
+
+                <ul>
+                    <li class="fragment">What does it mean for a language to be “interpreted?”</li>
+                    <li class="fragment">Trick question – “interpreted” and “compiled” refer to implementations, not languages</li>
+                    <li class="fragment"> The most common Python implementation (CPython) is a mix of both:
+                        <ul>
+                            <li class="fragment"> Compiles source code to byte code (.pyc files)</li>
+                            <li class="fragment">Then interprets the byte code directly, executing as it goes</li>
+                            <li class="fragment">No need to compile to machine language</li>
+                            <li class="fragment">Essentially, source code can be run directly</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            
+            <section>
+                <h3>The REPL</h3>
+                <ul>
+                    <li class="fragment">Read Evaluate Print Loop</li>
+                    <pre class="fragment"><code data-trim>
+noam@ubuntu:~$ python
+Python 2.7.9 (default, Apr  2 2015, 15:33:21) 
+[GCC 4.9.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>print('hello world!')    
+hello world!
+                    </code></pre>
+                    <li class="fragment">Quick!</li>
+                    <li class="fragment">Helps test Python behaviour</li>
+                    <li class="fragment">Bad for multiline code (i.e. classes, functions)</li>
+                </ul>
+            </section>
+            
+            
+            <section>
+                <h3>Running Python - IPython</h3>
+                <img src="img/ipython-intro.png">
+                <ul>
+                    <li class="fragment">Auto-completion</li>
+                    <li class="fragment">Magic functions</li>
+                    <li class="fragment">IPython notebook</li>
+                </ul>
+                <pre class="fragment"><code data-trim>
+noam@ubuntu:~$ sudo pip install ipython[all]
+noam@ubuntu:~$ ipython
+                </code></pre>
+            </section>
+            
+            
+            <section>
+                <h3>Running Python - .py files</h3>
+                <ul>
+                    <li>Python source files</li>
+                    <li class="fragment">(No compiliation)</li>
+                </ul>
+                <pre class="fragment"><code>
+noam@ubuntu:~$ gedit /tmp/example.py
+                </code></pre>
+                <img class="fragment" src="img/gedit-hello-world.png">
+                <pre class="fragment"><code data-trim>
+noam@ubuntu:~$ python /tmp/example.py
+hello world!
+                </code></pre>
+            </section>
+            
+            
+            <section>
+                <h3>Play with the interpeter</h3>
+                <pre><code class="python" data-trim>
+>>> 1 + 1
+2
+>>> print('hello world')
+hello world
+>>> x = 1
+>>> y = 2
+>>> x + y
+3
+>>> print(x)
+1
+                </code></pre>                
+            </section>         
+            
+    
+            <section>
+                <h3>Style overview</h3>
+                <ul>
+                    <li class="fragment">PEP 8 - <q cite="https://www.python.org/dev/peps/pep-0008/#id10">code is read much more often than it is written</q>
+                    <li class="fragment">Blocks are denoted by whitespace</li>
+                    <li class="fragment">Use spaces, not tabs (or set the editor to insert spaces instead of tabs)</li>
+                    <li class="fragment">Single line comments are denoted with #</li>
+                    <li class="fragment">Multi-line comments are denoted with '''</li>
+                    <li class="fragment"> Variable and function names should be lower case with underscores separating words</li>
+                    <li class="fragment">Use docstrings to document what a function does:</li>
+                    <pre class="fragment"><code class="python" data-trim>
+def add(x,y):
+''' Adds two numbers '''
+    return x + y                        
+                    </code></pre>
+                    
+                </ul>
+            </section>
+    
+            
+            <section>
+                <h3>Datatypes overview</h3>
+                <ul>
+                    <li class="fragment">None</li>
+                    <li class="fragment">Booleans (True, False)</li>
+                    <li class="fragment">Integers, Floats</li>
+                    <li class="fragment">Sequences</li>
+                    <ul>
+                        <li class="fragment">Lists</li>
+                        <li class="fragment">Tuples</li>
+                        <li class="fragment">Strings</li>
+                        <li class="fragment">Dictionaries</li>
+                    </ul>
+                    <li class="fragment">Classes and class instances</li>
+                    <li class="fragment">Modules and packages</li>
+                </ul>
+            </section>
+    
+    
+            <section>
+                <h3>Booleans</h3>
+                <ul>
+                    <li class="fragment">Booleans: <code>True, False</code></li>
+                    <li class="fragment">The following act like <code>False</code>:</li>
+                    <ul>
+                        <li class="fragment"><code>None</code></li>
+                        <li class="fragment"><code>0</code></li>
+                        <li class="fragment"><code>[]</code>(Empty sequences)</li>
+                    </ul>
+                    <li class="fragment">Everything else acts like <code>True</code></li>
+                </ul>
+            </section>
+            
+    
+            <section>
+                <h3>Boolean operations</h3>
+                <p>These are the Boolean operations, ordered by ascending priority:</p>
+                <table class="fragment">
+                    <thead valign="bottom">
+                        <tr>
+                            <th class="head">Operation</th>
+                            <th class="head">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody valign="top">
+                        <tr>
+                            <td><code>x or y</code></td>
+                            <td>if <em>x</em> is false, then <em>y</em>, else <em>x</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>x and y</code></td>
+                            <td>if <em>x</em> is false, then <em>x</em>, else <em>y</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>not x</code></td>
+                            <td>if <em>x</em> is false, then <em>True</em>, else <em>False</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class='fragment'><small>*and, or are short-circuit operators</small></p>
+            </section>
+    
+    
+            <section>
+                <h3>Boolean examples</h3>
+ 
+                <pre class="fragment"><code class="python" data-trim>
+>>> not True
+False
+                </code></pre>
+                <pre class="fragment"><code class="python" data-trim>
+>>> True or False
+True
+                </code></pre>
+                <pre class="fragment"><code class="python" data-trim>
+>>> False and True
+False
+                </code></pre>
+                <pre class="fragment"><code class="python" data-trim>
+>>> (1 + 1) or True
+2
+                </code></pre>
+                <pre class="fragment"><code class="python" data-trim>
+>>> True and (2 + 2)
+4
+                </code></pre>  
+                <pre class="fragment"><code class="python" data-trim>
+>>> not 0
+True
+                </code></pre>       
+                <p class="fragment"> Go to socrative quiz!</p>
+            </section>
+    
+            
+            <section>
+                <h3>Integers and floats</h3>
+                <ul>
+                    <li class="fragment">Numeric operators: <code>+ - * / // % **</code></li>
+                    <li class="fragment">No i++ or ++i, but we do have += and -=</li>
+                    <li class="fragment">Int and Float:</li>
+                    <ul>
+                        <pre class="fragment"><code class="python" data-trim>
+>>> type(2)                        
+int
+                        </code></pre>
+                        <pre class="fragment"><code class="python" data-trim>
+>>> type(2.5)
+float
+                        </code></pre>
+                        <pre class="fragment"><code class="python" data-trim>
+>>> 5/2 #python3
+2.5
+>>> 5/2 #python2
+2
+>>> 5/2.0 #python2
+2.5
+                        </code></pre>
+                    </ul>
+                </ul>
+            </section>
+    
+    
+            <section>
+                <h3>Assignments</h3>
+                <pre class="fragment"><code class="python" data-trim>
+>>> a = b = 0
+>>> a, b = 3, 5                    
+                </code></pre>
+                <p class="fragment">Super cool:</p>
+                <pre class="fragment"><code class="python" data-trim>
+>>> a, b = b, a
+>>> a
+5
+>>> b
+3                                       
+                </code></pre>
+            </section>
+    
+        <section>
+            <h3>Comparisons</h3>
+            <pre class="fragment"><code class="python" data-trim>
+>>> 5 == 5
+True
+            </code></pre>
+            <pre class="fragment"><code class="python" data-trim>
+>>> 'hello' == 'hello'
+True                
+            </code></pre>
+            <pre class="fragment"><code class="python" data-trim>
+>>> 1 != 2
+True                
+            </code></pre>
+            <pre class="fragment"><code class="python" data-trim>
+>>> 5 > 3
+True                
+            </code></pre>
+            <pre class="fragment"><code class="python" data-trim>
+>>> 'b' > 'a'
+True                
+            </code></pre>
+        </section>
+    
+        <section>
+            <h3>If Statements</h3>
+            <pre class="fragment"><code class="python" data-trim>
+if a == 0:
+    print 'a is 0'
+elif a == 1:
+    print 'a is 1'
+else:
+    print 'a is something else'
+            </code></pre>
+        </section>
+    
+        <section>
+            <h3>For Loops</h3>
+            <pre class="fragment"><code class="python" data-trim>
+>>> range(5)
+[0, 1, 2, 3, 4]
+            </code></pre>
+            <pre class="fragment"><code class="python" data-trim>
+for i in range(5):
+    print(i, end=' ')
+
+0 1 2 3 4
+            </code></pre>
+        </section>
+    
+    
+        <section>
+            <h3>Break and Continue</h3>
+            <pre class="fragment"><code class="python" data-trim>
+for i in range(10):
+    if i == 3:
+        continue
+    elif i==8:
+        break
+    print(i, end=' ')
+    
+0 1 2 4 5 6 7              
+            </code></pre>
+        </section>
+    
+    
+        <section>
+            <h3>While Loops</h3>
+            <pre class="fragment"><code class="python" data-trim>          
+i = 0
+while i &lt;= 3:
+    print(i, end=' ')
+    i += 1
+
+0 1 2 3
+        </code></pre>
+        </section>
+        
+        
+        <section>
+            <h3>Ranges</h3>
+                <li class="fragment">range(n) produces [0, 1, ..., n-1]</li>
+                <li class="fragment">range(i, j) produces [i, i+1, ..., j-1]</li>
+                <li class="fragment">range(i, j, k) produces [i, i+k, ..., m]</li>
+                <pre class="fragment"><code class="python" data-trim>
+>>> range(5, 25, 3)
+[5, 8, 11, 14, 17, 20, 23]
+                </code></pre>                
+        </section>
+        
+                   <section>
+                <h3>Functions</h3>
+                <pre><code class="python" data-trim>
+>>> def increment(x):
+        return x + 1                    
+>>> increment(3) 
+4
+                </code></pre>
+                <ul>
+                    <li class="fragment">Colon (:) indicates start of a block</li>
+                    <li class="fragment">Following lines are indented</li>
+                    <li class="fragment">Function declaration doesn’t specify return type</li>
+                    <li class="fragment">all functions return a value (None if not specified)</li>
+                    <li class="fragment">Parameter datatypes are not specified either</li>
+                </ul> 
+            </section>   
+            
+            
+            <section>
+                <h3>Dynamic typing</h3>
+                <p>What does “dynamically typed” mean?</p>
+                <ul>
+                    <li class="fragment">Variable types are not declared</li>
+                    <li class="fragment">Python figures the types out at runtime</li>
+                </ul>
+            </section>
+            
+            
+            <section>
+                <h3>Dynamic typing</h3>
+                <p>We can check types with our code:</p>
+                <pre class="fragment"><code class="python" data-trim>
+>>> type(x)
+&lt;type 'int'&gt;
+                </code></pre>
+                <pre class="fragment"><code class="python" data-trim>
+>>> isinstance(x, int)
+True
+                </code></pre>
+                <ul>
+                    <li class="fragment"><code>isinstance</code> caters to inheritance and is more suitable for type check in production code</li>
+                    <li class="fragment"><code>type</code> is more suitable for fiddling and debugging</il>
+                </ul> </p>
+            </section>
+    
+    
+            <section>
+                <h3>Dynamic typing</h3>
+                <p>Interpreter keeps track of all types and doesn’t allow you to do
+ that are incompatible with that type:</p>
+                <pre><code data-trim>
+>>> increment('3')
+TypeError: cannot concatenate 'str' and 'int' objects
+                </code></pre>
+            </section>
+
+    
+            <section>
+                <h3>Duck typing</h3>
+                 <blockquote cite="http://en.wikipedia.org/wiki/Duck_test"> “When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.”<small>James Whitcomb Riley</small></blockquote>
+            </section>
+    
+    
+            <section data-background="http://i.giphy.com/e2CIuhhEz7nJ6.gif"></section>
+    
+    
+            <section>
+                <h3>Duck typing</h3>
+                <pre class="fragment"><code class="python" data-trim>
+>>> def increment(x):
+        try: 
+            return x + 1
+        except TypeError:
+            return int(x) + 1
+                </code></pre>
+                <pre class="fragment"><code data-trim>
+>>> increment('3')
+4
+                </code></pre>
+                <ul>
+                    <li class="fragment">Duck typing is concerned with establishing the <strong>suitability of an object for some purpose</strong> rather than what type it is.</li>
+                    <li class="fragment">Very pythonic</li>
+                </ul>
+            </section>
+    
+            
+            
+    
+            
+            
+
+                
+
+
+
+
+            <section>
+                <h2>Reference:</h2>
+
+                <ul>
+                    <li><a href="http://www.cis.upenn.edu/~cis192/spring2014/">Lili Dworkin</a>
+                    </li>
+                </ul>
+
+                <!--<section data-markdown="1-intro.md" data-separator="---" data-separator-vertical="^~~~" data-separator-notes="^Note:" data-charset="iso-8859-15">-->
+            </section>
+        </div>
+
+    </div>
+
+    <script src="revealjs/lib/js/head.min.js"></script>
+    <script src="revealjs/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'revealjs/lib/js/classList.js',
+                condition: function () {
+                    return !document.body.classList;
+                }
+      }, {
+                src: 'revealjs/plugin/markdown/marked.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+      }, {
+                src: 'revealjs/plugin/markdown/markdown.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+      }, {
+                src: 'revealjs/plugin/highlight/highlight.js',
+                async: true,
+                condition: function () {
+                    return true;
+                },
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+      }, {
+                src: 'revealjs/plugin/zoom-js/zoom.js',
+                async: true
+      }, {
+                src: 'revealjs/plugin/notes/notes.js',
+                async: true
+      }]
+        });
+    </script>
+
+</body>
+
+</html>
