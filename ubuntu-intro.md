@@ -1,3 +1,4 @@
+<!-- .slide: data-background="img/ubuntu.jpeg" -->
 Ubuntu/Linux
 =====================
 ### Python basics course
@@ -15,12 +16,15 @@ Ubuntu/Linux
 > "I am what I am because of who we all are" <!-- .element: class="fragment" -->
 
 ---
+<!-- .slide: data-background="img/open-source-software.jpg" -->
+---
 ### FOSS
 - FREE to use <!-- .element: class="fragment" -->
 - FREE to share <!-- .element: class="fragment" -->
 - FREE to develop <!-- .element: class="fragment" -->
 
 ---
+<!-- .slide: data-background="img/Tux-Linux-Distros.jpg" -->
 ### Ubuntu? Linux?
 - Ubuntu is the distribution, Linux is the kernel <!-- .element: class="fragment" -->
 - There are many other distributions: Fedora, Redhat, Arch etc... <!-- .element: class="fragment" -->
