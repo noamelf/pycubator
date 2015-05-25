@@ -136,7 +136,7 @@ body {
 
 .reveal code {
   font-family: monospace;
-  font-size: 90%;
+  font-size: 80%;
   background: #3F3F3F;}
 
 .reveal pre code {
@@ -146,7 +146,8 @@ body {
   max-height: 400px;
   word-wrap: normal;
   background: #3F3F3F;
-  color: #DCDCDC; }
+  color: #DCDCDC; 
+  font-size: 100%;}
 
 .reveal table {
   margin: auto;
