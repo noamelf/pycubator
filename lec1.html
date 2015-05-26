@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="revealjs/css/reveal.css">
-    <link rel="stylesheet" href="revealjs/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/black.css" id="theme">
 <!--    <link rel="stylesheet" href="css/my.css">-->
 
     <!-- Code syntax highlighting -->
@@ -154,6 +154,7 @@ print('Hello World!')
                 </ul>
             </section>
             
+ 
             
             <section>
                 <h3>The REPL</h3>
@@ -169,6 +170,7 @@ hello world!
                     </code></pre>
                     <li class="fragment">Quick!</li>
                     <li class="fragment">Helps test Python behaviour</li>
+                    <li class="fragment">Get inforamtion with <code>help()</code></li>
                     <li class="fragment">Bad for multiline code (i.e. classes, functions)</li>
                 </ul>
             </section>
@@ -220,9 +222,34 @@ hello world
 >>> print(x)
 1
                 </code></pre>                
-            </section>         
+            </section> 
             
-    
+            
+            <section>
+                <h3>Objects</h3>
+                <ul>
+                    <li class="fragment">Everything is an object in Python</li>
+                    <li class="fragment"><code>id()</code> - unique object id</li>
+                    <li class="fragment"><code>type()</code> - object type</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h3>Binding</h3>
+                <img src="img/binding1.png">
+            </section>
+            
+            <section>
+                <h3>Binding</h3>
+                <img src="img/binding2.png">
+            </section>
+            
+            <section>
+                <h3>Binding</h3>
+                <img src="img/binding3.png">
+            </section>
+
+            
             <section>
                 <h3>Style overview</h3>
                 <ul>
@@ -578,6 +605,17 @@ TypeError: cannot concatenate 'str' and 'int' objects
     
             <section data-background="http://i.giphy.com/YcIYHfVbW4hR6.gif">
                 <h1 class="fragment">Quiz!</h1>
+            </section>
+    
+            <section>
+                <h3>Imports</h3>
+                <ul>
+                    <li class="fragment">Allow use of other python files and libraries</li>
+                    <li class="fragment">imports: import math</li>
+                    <li class="fragment">Named imports: import math as m</li>
+                    <li class="fragment">Specific imports: from math import pow</li>
+                    <li class="fragment">Import all: from math import *</li>
+                </ul>
             </section>
     
             <section>
