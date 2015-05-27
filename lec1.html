@@ -236,7 +236,7 @@ hello world
             
             <section>
                 <h3>Binding</h3>
-                <img src="img/binding1.png">
+                <img  src="img/binding1.png">
             </section>
             
             <section>
@@ -534,89 +534,6 @@ while i &lt;= 3:
                     <li class="fragment">Parameter datatypes are not specified either</li>
                 </ul> 
             </section>   
-            
-            
-            <section>
-                <h3>Dynamic typing</h3>
-                <p>What does “dynamically typed” mean?</p>
-                <ul>
-                    <li class="fragment">Variable types are not declared</li>
-                    <li class="fragment">Python figures the types out at runtime</li>
-                </ul>
-            </section>
-            
-            
-            <section>
-                <h3>Dynamic typing</h3>
-                <p>We can check types with our code:</p>
-                <pre class="fragment"><code class="python" data-trim>
->>> type(x)
-&lt;type 'int'&gt;
-                </code></pre>
-                <pre class="fragment"><code class="python" data-trim>
->>> isinstance(x, int)
-True
-                </code></pre>
-                <ul>
-                    <li class="fragment"><code>isinstance</code> caters to inheritance and is more suitable for type check in production code</li>
-                    <li class="fragment"><code>type</code> is more suitable for fiddling and debugging</il>
-                </ul> </p>
-            </section>
-    
-    
-            <section>
-                <h3>Dynamic typing</h3>
-                <p>Interpreter keeps track of all types and doesn’t allow you to do
- that are incompatible with that type:</p>
-                <pre><code data-trim>
->>> increment('3')
-TypeError: cannot concatenate 'str' and 'int' objects
-                </code></pre>
-            </section>
-
-    
-            <section>
-                <h3>Duck typing</h3>
-                 <blockquote cite="http://en.wikipedia.org/wiki/Duck_test"> “When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.”<small>James Whitcomb Riley</small></blockquote>
-            </section>
-    
-    
-            <section data-background="http://i.giphy.com/e2CIuhhEz7nJ6.gif"></section>
-    
-    
-            <section>
-                <h3>Duck typing</h3>
-                <pre class="fragment"><code class="python" data-trim>
->>> def increment(x):
-        try: 
-            return x + 1
-        except TypeError:
-            return int(x) + 1
-                </code></pre>
-                <pre class="fragment"><code data-trim>
->>> increment('3')
-4
-                </code></pre>
-                <ul>
-                    <li class="fragment">Duck typing is concerned with establishing the <strong>suitability of an object for some purpose</strong> rather than what type it is.</li>
-                    <li class="fragment">Very pythonic</li>
-                </ul>
-            </section>
-    
-            <section data-background="http://i.giphy.com/YcIYHfVbW4hR6.gif">
-                <h1 class="fragment">Quiz!</h1>
-            </section>
-    
-            <section>
-                <h3>Imports</h3>
-                <ul>
-                    <li class="fragment">Allow use of other python files and libraries</li>
-                    <li class="fragment">imports: import math</li>
-                    <li class="fragment">Named imports: import math as m</li>
-                    <li class="fragment">Specific imports: from math import pow</li>
-                    <li class="fragment">Import all: from math import *</li>
-                </ul>
-            </section>
     
             <section>
                 <h2>Reference:</h2>
