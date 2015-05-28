@@ -1,22 +1,4 @@
-Introduction
-============
-
-### Python basics - lecture \#2
-
-[Noam Elfanbaum](http://thespoon.ghost.io)/[@noamelf](http://twitter.com/noamelf)
-
----
-### Imports
-
--   Allow use of other python files and libraries
--   imports: import math
--   Named imports: import math as m
--   Specific imports: from math import pow
--   Import all: from math import \*
-
----
-
-### Dynamic typing
+## Dynamic typing
 
 What does "dynamically typed" mean?
 
@@ -25,7 +7,7 @@ What does "dynamically typed" mean?
 
 ---
 
-### Dynamic typing
+## Dynamic typing
 
 We can check types with our code:
 
@@ -47,7 +29,7 @@ True
 
 ---
 
-### Dynamic typing
+## Dynamic typing
 
 Interpreter keeps track of all types and doesn’t allow you to do that
 are incompatible with that type:
@@ -57,17 +39,18 @@ are incompatible with that type:
     
 ---                 
 
-### Duck typing
+## Duck typing
 
-> “When I see a bird that walks like a duck and swims like a duck and
-> quacks like a duck, I call that bird a duck.”James Whitcomb Riley
+> "When I see a bird that walks like a duck and swims like a duck and
+> quacks like a duck, I call that bird a duck."  
+> James Whitcomb Riley
 
 ---
 
 <!-- .slide: data-background="http://i.giphy.com/e2CIuhhEz7nJ6.gif" --> 
 
 ---
-### Duck typing
+## Duck typing
 
 ```python
 >>> def increment(x):
@@ -87,7 +70,3 @@ are incompatible with that type:
 -   Duck typing is concerned with establishing the **suitability of an
     object for some purpose** rather than what type it is.
 -   Very pythonic
-
----
-
-
