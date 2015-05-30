@@ -8,7 +8,7 @@
 - Types included are: string, tuple, list, dictionary, set.
 
 ---
-#String
+# String
 <!-- .slide: data-background="img/string.jpg" --> 
 
 --
@@ -67,14 +67,14 @@
 # Tuple
 <!-- .slide: data-background="img/tulips.jpg" --> 
 --
-# Overview
+## Overview
 - Tuples are used for grouping ordered data
 - Support indexing and slicing syntax
 - Immutable
 - Powerful assigment feature (packing/unpacking) 
 
 --
-# Basics
+## Basics
 - Syntax `(1, 2, 'hi')` or just `1, 2, 'hi'` (be careful)
 - `tuple()` construct a tuple from other iteratables 
 - Supports nested tuples `((1, 2), (3, 4))`
@@ -90,7 +90,7 @@
 - Useful if you sometimes want `tup[2*i]` or `tup[i]`
 
 --
-# Powerful assigments
+## Powerful assigments
 - `x = 1,` 
 - `x, y = 'hi', 'man'`
 - `x, y = y, x`
@@ -155,7 +155,7 @@
 - Replace long `if x = a: elif x = b: elif...` with a dictionary lookup
 
 ---
-# Set
+## Set
 <!-- .slide: data-background="img/set.png" --> 
 
 --
@@ -163,7 +163,7 @@
 - No order, no duplicates
 - Hash Set: elements must be immutable
 - Empty set: `set()` not `{}` (empty dict)
-- `{1, ’blah’, 5, -1}`
+- `{1, 'blah', 5, -1}`
 - Can de-duplicate a list: `list(set(lst))`
 
 --
@@ -244,3 +244,27 @@ for k, v in lst:
 ```python
 {k: v for k,v in lst}
 ```
+
+--
+## Set Comprehensions
+- Like dictionaries but no `:`
+- This:
+```python
+s = set()
+for x in lst:
+    s.add(x)
+
+```
+- Becomes that:
+```python
+{x for x in lst}
+```
+
+--
+## Tuple Comprehensions?
+```python
+tup = (x for x in lst)
+type(tup)
+<class ’generator’>
+```
+- We’ll cover generators later
