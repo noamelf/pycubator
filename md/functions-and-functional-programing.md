@@ -271,7 +271,7 @@ f = lambda x: x + 1
 
 ## Partial Application
 ```python
-from functool import partial
+from functools import partial
 def add(x, y): 
     return x + y
 
