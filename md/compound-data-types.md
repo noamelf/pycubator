@@ -120,7 +120,7 @@
 
 --
 ## Multiplication and Copies
-- The component lists are not copies, they’re the same object
+- The component lists are not copies, they're the same object
 - Shallow copy a list with `lst[:]`
 - Use the copy module for deep copy: `copy.deepcopy(lst)`
 
@@ -132,9 +132,9 @@
 ## Basics   
 - A dictionary is a hash map:
   - It hashes the keys to lookup values
-  - Keys must be immutable so that the hash doesn’t change
+  - Keys must be immutable so that the hash doesn't change
 - `dict()` and `{}` are empty dictionaries
-- `dict(([k1, v1), (k2, v2)))` or `{k1:v1, k2:v2}`
+- `dict(((k1, v1), (k2, v2)))` or `{k1:v1, k2:v2}`
 - `dict(zip(key_lst, val_lst))`: create a dict from to lists
 - `d[k]` accesses the value mapped to `k`
 - `d[k] = v` updates the value mapped to `k`
@@ -249,6 +249,7 @@ for k, v in lst:
 ## Set Comprehensions
 - Like dictionaries but no `:`
 - This:
+
 ```python
 s = set()
 for x in lst:
@@ -256,6 +257,7 @@ for x in lst:
 
 ```
 - Becomes that:
+
 ```python
 {x for x in lst}
 ```
@@ -265,6 +267,6 @@ for x in lst:
 ```python
 tup = (x for x in lst)
 type(tup)
-<class ’generator’>
+<class 'generator'>
 ```
-- We’ll cover generators later
+- We'll cover generators later

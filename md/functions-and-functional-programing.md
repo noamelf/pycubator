@@ -1,7 +1,3 @@
-# Functions and Functional Programming
-<!-- .slide: data-background="img/function.jpg" --> 
----
-
 # Positional and Named Arguments
 <!-- .slide: data-background="img/steen_argument_over_a_card_game.jpg" --> 
 <small>Jan Steen, Argument over a Card Game, Wikimedia Commons.</small>
@@ -228,7 +224,7 @@ def outer():
 --
 
 ## First Class Functions
-- A higher order function is a function that:
+- A **higher order function** is a function that does at least one of the following:
     - Takes a function as one of its inputs
     - Outputs a function
 
@@ -322,7 +318,22 @@ def func(arg1, arg2, ...):
     pass
 func = decmaker(argA, argB, ...)(func)
 ```
+--
+## Deorator example
+```python
+import urllib
+from functools import lru_cache
 
+@lru_cache(maxsize=32)
+def get_pep(num):
+    'Retrieve text of a Python Enhancement Proposal'
+    resource = 'http://www.python.org/dev/peps/pep-{:04d}'.format(num)
+    try:
+        with urllib.request.urlopen(resource) as s:
+            return s.read()
+    except urllib.error.HTTPError:
+        return 'Not Found'
+```
 --
 
 ## Multiple Decorators
