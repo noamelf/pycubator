@@ -164,23 +164,20 @@ class Circle(Shape, Drawable):
 
 -- 
 
-## __new__, __init__, __del__, __call__
+## __new__, __init__, __call__
 - `x = C()` &srarr; `x = C.__init__(C.__new__())`
     - `__new__` creates a new object
     - `__init__` initializes it
-- `del x` removes the binding of `x` in the current scope
-    - If `x` was the last reference to an object then `obj.__del__()` is called
 - `x(arg,...)` &srarr; `x.__call__(arg,...)`
 
 -- 
 
-## __str__, __repr__, __format__
+## __str__, __repr__
 - `str(x)` &srarr; `x.__str__()`
     - Returns a human readable string
 - `repr(x)` &srarr; `x.__repr__()`
     - Returns a complete description of object    
-- `'{f_str}'.format(x)` &srarr; `x.__format__(f_str)`
-    - Formats x according to f_str
+
 
 -- 
 
@@ -194,11 +191,10 @@ class Circle(Shape, Drawable):
 
 -- 
 
-## \_\_hash\_\_ and \_\_eq\_\_
-- Hashing is used in dictionaries and sets
-- If `__hash__` is not explicitly defined calling it will return the object id (`id()`) 
-- User defined objects default to reference equality
-- If you define `__eq__` but not `__hash__` the object is unhashable
+## Arithmetic operations
+- All the arithmetic operators have magic methods
+- `__add__, __sub__, __mod__, __xor__, ...`
+- Additional methods for += and others
 
 -- 
 
@@ -209,18 +205,3 @@ class Circle(Shape, Drawable):
 - Defining `__getattr__` is useful to specify default values
 - `getattr(x, 'value', default)` lets you give a default if everything else fails
 
--- 
-
-## Containers
-- `len(x)` &srarr; `x.__len__()`
-- `x[i]` &srarr; `x.__getitem__(i)`
-- `x[i] = y` &srarr; `x.__setitem__(i, y)`
-- `x[start:stop:step]` &srarr; `x.__getitem__(slice(start, stop, step))`
-- `k in x` &srarr; `x.__contains__(k)`
-
--- 
-
-## Numeric Types
-- All the arithmetic operators have magic methods
-- `__add__, __sub__, __mod__, __xor__, ...`
-- Additional methods for += and others
