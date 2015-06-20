@@ -55,6 +55,7 @@ body {
 .reveal h4 {
   font-size: 1em; }
 
+
 .reveal h1 {
   text-shadow: none; }
 
@@ -62,6 +63,7 @@ body {
  * OTHER
  *********************************************/
 .reveal p {
+  text-align: left;
   margin: 20px 0;
   line-height: 1.3; }
 
