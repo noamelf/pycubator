@@ -205,7 +205,7 @@ class MyException(Exception):
 ```
 
 --
-# Practice
+## Practice
 Write your own exception!
 Create a function called `guess_my_name` that: 
 - Takes user input. 
