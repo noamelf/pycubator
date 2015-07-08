@@ -275,8 +275,10 @@ exception handling for general application control flow. EOFError, for example.
 
 Write the following code in EAFP style
 ```python 
-if "key" in my_dict:
-    x = my_dict["key"]
-else:
-    False
+def check_dict(d, x):
+    if 'key' in my_dict:
+        x = my_dict['key']
+        return True
+    else:
+        return False
 ``` 
