@@ -1,50 +1,12 @@
-## LBYL vs EAFP
-
-Look Before You Leap
-  
->[...] explicitly tests for pre-conditions before making calls or
-lookups. This style contrasts with the EAFP approach and is
-characterized by the presence of many if statements.
+# Basics
+<!-- .slide: data-background="img/puzzles.jpg" --> 
 
 --
+## Python handles all errors with exceptions.
 
-## LBYL vs EAFP
-Easier to Ask for Forgiveness than Permission  
->[...] assumes the existence of valid keys or attributes and catches
-exceptions if the assumption proves false. This clean and fast style
-is characterized by the presence of many try and except
-statements. The technique contrasts with the LBYL style common
-to many other languages such as C.
+An exception is a signal that an error or other unusual condition has occurred.
 
 --
-
-## Examples
-LBYL:
-```python
-import os
-if os.path.exists('tmp.txt'):
-    with open('tmp.txt'):
-        pass
-```
-EAFP:
-```python
-try:
-    with open('tmp.txt'):
-        pass
-except IOError as e:
-    print(e)
-```
-
---
-
-## When to use
->"All errors are exceptions, but not all exceptions are errors"
-  
-Use exception handling to gracefully recover from application errors.
-But: It's perfectly allowed, and sometimes necessary, to utilize
-exception handling for general application control flow. EOFError, for example.
-
----
 ## Catch all exceptions
 
 ```python
@@ -76,6 +38,16 @@ except SomeException:
 
 --
 
+## Practice
+Try to divide `1/0`. What happens?
+Catch the exception and tell the user he cannot divide by zero.
+
+---
+
+# A bit more advanced
+<!-- .slide: data-background="img/puzzles.jpg" -->
+ 
+--
 ## Catching multiple exceptions
 Handling them all the same way
 ```python
@@ -99,7 +71,7 @@ except AnotherException:
     do_another_thing()
 ```
 
----
+--
 
 ## Raising exceptions
 
@@ -158,9 +130,20 @@ except Exception:
 This is useful for e.g. exception logging.
 
 --
+## Practice
+Read this [numbers.txt](misc/numbers.txt) file (don't use the `with` statement).
+Add the integers in the file together, and print the sum at the end.
+You need to except the following exceptions and let the user know the problem: 
+- `IOError`: if there is a problem opening the file.
+- `ValueError`: if the line read is not an integer.
+- All other types: if any other exception arise, catch it and say 'unexpected error occurred'
 
+---
+# More cool stuff
+<!-- .slide: data-background="img/puzzles.jpg" --> 
 
-## More cool stuff
+--
+## Finally
 Code in the `finally` block will always be executed (unless Python crashes completely).
 
 ```python
@@ -174,7 +157,7 @@ finally:
 
 --
 
-## More cool stuff
+## Else
 Code in the `else` block will be executed when no exception is raised
 
 ```python
@@ -186,9 +169,9 @@ else:
     print('Everything went according to plan')
 ```
 
----
+--
 
-## Exception matching
+## Inheritance
 Exceptions are matched by superclass relationships.
 
 - RuntimeError
@@ -205,8 +188,7 @@ except Exception as e:
 
 --
 
-## Exception matching
-- Exceptions are matched by superclass relationships. 
+## Exception matching 
 - exception hierarchies can be designed.
 - For example, `OverflowError`, `ZeroDivisionError` and `FloatingPointError` 
 are all subclasses of `ArithmeticError`.
@@ -221,3 +203,68 @@ It's as simple as
 class MyException(Exception):
     pass
 ```
+
+--
+# Practice
+Write your own exception!
+Create a function called `guess_my_name` that: 
+- Takes user input. 
+- Checks if the user guessed your name correctly
+- Throws an exception `NotMyName` if not.  
+
+Call that function:
+- In a while loop, call that function, 
+- if `NotMyName` exception is caught stay in the loop.
+- else exit and print 'success!'
+
+---
+
+# LBYL vs EAFP
+<!-- .slide: data-background="img/puzzles.jpg" --> 
+
+--
+## LBYL
+
+Look Before You Leap
+  
+>[...] explicitly tests for pre-conditions before making calls or
+lookups. This style contrasts with the EAFP approach and is
+characterized by the presence of many if statements.
+
+--
+
+## EAFP
+Easier to Ask for Forgiveness than Permission  
+>[...] assumes the existence of valid keys or attributes and catches
+exceptions if the assumption proves false. This clean and fast style
+is characterized by the presence of many try and except
+statements. The technique contrasts with the LBYL style common
+to many other languages such as C.
+
+--
+
+## Examples
+LBYL:
+```python
+import os
+if os.path.exists('tmp.txt'):
+    with open('tmp.txt'):
+        pass
+```
+EAFP:
+```python
+try:
+    with open('tmp.txt'):
+        pass
+except IOError as e:
+    print(e)
+```
+
+--
+
+## When to use
+>"All errors are exceptions, but not all exceptions are errors"
+  
+Use exception handling to gracefully recover from application errors.
+But: It's perfectly allowed, and sometimes necessary, to utilize
+exception handling for general application control flow. EOFError, for example.
