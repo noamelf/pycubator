@@ -268,3 +268,17 @@ except IOError as e:
 Use exception handling to gracefully recover from application errors.
 But: It's perfectly allowed, and sometimes necessary, to utilize
 exception handling for general application control flow. EOFError, for example.
+
+--
+
+## Practice
+
+Write the following code in EAFP style
+```python 
+def check_dict(d, x):
+    if x in d:
+        val = d[x]
+        return val
+    else:
+        return False
+``` 
