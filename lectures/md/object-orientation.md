@@ -1,5 +1,5 @@
 # Object orientation
-<!-- .slide: data-background="/img/3D-Object-Pictures.jpg" --> 
+<!-- .slide: data-background="img/3D-Object-Pictures.jpg" --> 
 
 --
 
@@ -109,7 +109,7 @@ class Circle:
 ---
 
 # Inheritance
-<!-- .slide: data-background="/img/William_Hogarth_Inheritance.jpg" --> 
+<!-- .slide: data-background="img/William_Hogarth_Inheritance.jpg" --> 
 <small> From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%27s_Progress). 
 "The Young Heir Takes Possession Of The Miser's Effects".</small>
 --
@@ -153,7 +153,7 @@ class Circle(Shape, Drawable):
 ---
 
 # Python Magic! (methods)
-<!-- .slide: data-background="/img/magic_mist.jpg" --> 
+<!-- .slide: data-background="img/magic_mist.jpg" --> 
 
 --
 ## Magic Methods

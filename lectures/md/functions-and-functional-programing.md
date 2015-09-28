@@ -1,5 +1,5 @@
 # Positional and Named Arguments
-<!-- .slide: data-background="/img/steen_argument_over_a_card_game.jpg" --> 
+<!-- .slide: data-background="img/steen_argument_over_a_card_game.jpg" --> 
 <small>Jan Steen, Argument over a Card Game, Wikimedia Commons.</small>
 
 --
@@ -65,7 +65,7 @@ function calls
 ---
 
 # Args and KWArgs
-<!-- .slide: data-background="/img/argument-shadows.jpg" --> 
+<!-- .slide: data-background="img/argument-shadows.jpg" --> 
 
 --
 
@@ -155,7 +155,7 @@ def func(name: str, hight: float = 1.90)-> int:
 ---
 
 # Global variables
-<!-- .slide: data-background="/img/global.jpeg" --> 
+<!-- .slide: data-background="img/global.jpeg" --> 
 
 --
 
@@ -203,7 +203,7 @@ def outer():
 
 ---
 #Functional Programming
-<!-- .slide: data-background="/img/lambda.jpg" --> 
+<!-- .slide: data-background="img/lambda.jpg" --> 
 --
 
 ## Background (1)
@@ -279,7 +279,7 @@ add_3 = partial(add, 3)
 ---
 
 #decorators
-<!-- .slide: data-background="/img/decorators.jpg" --> 
+<!-- .slide: data-background="img/decorators.jpg" --> 
 
 --
 

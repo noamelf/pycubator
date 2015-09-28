@@ -1,6 +1,6 @@
 # Dynamic typing
 <small>image credits: Romul Nutiu - [blue dynamic universe](http://www.wikiart.org/en/romul-nutiu/blue-dynamic-universe)</small>
-<!-- .slide: data-background="/img/blue-dynamic-universe.jpg" --> 
+<!-- .slide: data-background="img/blue-dynamic-universe.jpg" --> 
 --
 
 ## Dynamic typing

@@ -1,5 +1,5 @@
 # Basics
-<!-- .slide: data-background="/img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" --> 
 
 --
 ## Python handles all errors with exceptions.
@@ -45,7 +45,7 @@ Catch the exception and tell the user he cannot divide by zero.
 ---
 
 # A bit more advanced
-<!-- .slide: data-background="/img/puzzles.jpg" -->
+<!-- .slide: data-background="img/puzzles.jpg" -->
  
 --
 ## Catching multiple exceptions
@@ -140,7 +140,7 @@ You need to except the following exceptions and let the user know the problem:
 
 ---
 # More cool stuff
-<!-- .slide: data-background="/img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" --> 
 
 --
 ## Finally
@@ -220,7 +220,7 @@ Call that function:
 ---
 
 # LBYL vs EAFP
-<!-- .slide: data-background="/img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" --> 
 
 --
 ## LBYL

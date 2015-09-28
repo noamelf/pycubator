@@ -1,5 +1,5 @@
 # Compound Data Types
-<!-- .slide: data-background="/img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" --> 
 
 --
 ## Overview
@@ -9,7 +9,7 @@
 
 ---
 # String
-<!-- .slide: data-background="/img/string.jpg" --> 
+<!-- .slide: data-background="img/string.jpg" --> 
 
 --
 ## Basics
@@ -65,7 +65,7 @@
 
 ---
 # Tuple
-<!-- .slide: data-background="/img/tulips.jpg" --> 
+<!-- .slide: data-background="img/tulips.jpg" --> 
 --
 ## Overview
 - Tuples are used for grouping ordered data
@@ -98,7 +98,7 @@
 
 ---
 # List
-<!-- .slide: data-background="/img/list.jpg" --> 
+<!-- .slide: data-background="img/list.jpg" --> 
 --
 ## Basics
 - An ordered collection of values
@@ -126,7 +126,7 @@
 
 ---
 # Dictionary
-<!-- .slide: data-background="/img/dictionary.jpg" --> 
+<!-- .slide: data-background="img/dictionary.jpg" --> 
 
 --
 ## Basics   
@@ -156,7 +156,7 @@
 
 ---
 ## Set
-<!-- .slide: data-background="/img/set.png" --> 
+<!-- .slide: data-background="img/set.png" --> 
 
 --
 ## Basics
@@ -186,7 +186,7 @@
 
 ---
 # More On Sequences
-<!-- .slide: data-background="/img/sequences.jpg" --> 
+<!-- .slide: data-background="img/sequences.jpg" --> 
 
 --
 ## Builtins

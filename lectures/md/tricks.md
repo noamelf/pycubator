@@ -1,5 +1,5 @@
 # Tricks
-<!-- .slide: data-background="/img/tricks.jpg" --> 
+<!-- .slide: data-background="img/tricks.jpg" --> 
 --
 ```python
 x if cond else y

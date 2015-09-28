@@ -1,5 +1,5 @@
 # Interactive Input
-<!-- .slide: data-background="/img/input.png" --> 
+<!-- .slide: data-background="img/input.png" --> 
 --
 ## Interactive Input
 
@@ -27,7 +27,7 @@ noam
 ---
 
 # Files
-<!-- .slide: data-background="/img/files.jpg" --> 
+<!-- .slide: data-background="img/files.jpg" --> 
 <small> A corridor of files at The National Archives UK. wikimedia commons. <small>
 --
 ## Opening Files
@@ -90,7 +90,7 @@ with open('example.txt') as f:
       
 --
 
-![](/img/open-diagram.jpg)
+![](img/open-diagram.jpg)
 
 --
 ## Practice
@@ -113,7 +113,7 @@ The output will be:
 ---
 
 # stdin / stdout / stderror
-<!-- .slide: data-background="/img/stdin.png" --> 
+<!-- .slide: data-background="img/stdin.png" --> 
 --
 
 ## Definitions
@@ -176,7 +176,7 @@ NameError: name 'printa' is not defined
 ---
 
 # Command line arguments
-<!-- .slide: data-background="/img/cmdline.png" --> 
+<!-- .slide: data-background="img/cmdline.png" --> 
 --
 ## argv
 - `sys.argv[0]` contains file name

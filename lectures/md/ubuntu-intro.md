@@ -1,4 +1,4 @@
-<!-- .slide: data-background="/img/ubuntu.jpeg" -->
+<!-- .slide: data-background="img/ubuntu.jpeg" -->
 Ubuntu/Linux
 =====================
 ### Python basics course
@@ -16,7 +16,7 @@ Ubuntu/Linux
 > "I am what I am because of who we all are" <!-- .element: class="fragment" -->
 
 ---
-<!-- .slide: data-background="/img/open-source-software.jpg" -->
+<!-- .slide: data-background="img/open-source-software.jpg" -->
 ---
 ### FOSS
 - FREE to use <!-- .element: class="fragment" -->
@@ -24,7 +24,7 @@ Ubuntu/Linux
 - FREE to develop <!-- .element: class="fragment" -->
 
 ---
-<!-- .slide: data-background="/img/Tux-Linux-Distros.jpg" -->
+<!-- .slide: data-background="img/Tux-Linux-Distros.jpg" -->
 ### Ubuntu? Linux?
 - Ubuntu is the distribution, Linux is the kernel <!-- .element: class="fragment" -->
 - There are many other distributions: Fedora, Redhat, Arch etc... <!-- .element: class="fragment" -->
@@ -42,8 +42,8 @@ Ubuntu/Linux
 
 ---
 ### Ubuntu terminal
-![](/img/terminal.png) <!-- .element: class="fragment" -->
-![](/img/terminal1.png) <!-- .element: class="fragment" -->
+![](img/terminal.png) <!-- .element: class="fragment" -->
+![](img/terminal1.png) <!-- .element: class="fragment" -->
 
 ---
 ### The filesystem
@@ -178,7 +178,7 @@ $ gedit example.py
 - Choose the editor tab.
 - Change tabs width to 4.
 - Select 'insert spaces instead of tabs'
-![](/img/gedit-Preferences.png)
+![](img/gedit-Preferences.png)
 
 ---
 ### Reference
