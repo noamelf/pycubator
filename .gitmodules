@@ -1,3 +1,3 @@
-[submodule "lectures/revealjs"]
-	path = lectures/revealjs
+[submodule "slides/revealjs"]
+	path = slides/revealjs
 	url = https://github.com/hakimel/reveal.js
