@@ -1,4 +1,4 @@
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../revealjs/lib/font/source-sans-pro/source-sans-pro.css);
 /**
  * Black theme for reveal.js. This is the opposite of the 'white' theme.
  *
@@ -12,7 +12,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 body {
   background: #222;
-  background-color: #222; }
+}
 
 .reveal {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
