@@ -11,7 +11,9 @@
 <p>Hello and welcome to the Python incubator training course, where do you want to go?
 </p>
 <ol>
-    <li><a href="intro.html">Introduction</a></li>
+    {% for _, filename, title in slides %}
+    <li><a href={{ filename }}>{{ title }}</a></li>
+    {% endfor %}
 </ol>
 <footer>
     <p>
