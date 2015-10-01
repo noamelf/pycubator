@@ -25,7 +25,7 @@ def get_md_files():
 def main():
     slide_tmpl, index_tmpl = get_tmpl('slide.j2'), get_tmpl('index.j2')
 
-    md_files = [(os.path.join(*md_file.parts[1:]), md_file.with_suffix('.html').name, title)
+    md_files = [(str(md_file), md_file.with_suffix('.html').name, title)
                 for md_file, title in get_md_files()]
 
     for md_file, html_file, title in md_files:
