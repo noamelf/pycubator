@@ -3,7 +3,7 @@ import sys
 
 from jinja2 import Environment, FileSystemLoader
 import os
-import shutil
+
 
 get_tmpl = Environment(loader=FileSystemLoader('templates/')).get_template
 
@@ -16,7 +16,7 @@ def extract_slide_title(md_file):
 
 
 def get_md_files():
-    p = Path('output', 'content')
+    p = Path('content')
     for md_file in sorted(p.iterdir()):
         if md_file.suffix == '.md':
             yield md_file, extract_slide_title(md_file)
@@ -31,10 +31,10 @@ def main():
     for md_file, html_file, title in md_files:
         rendered_template = slide_tmpl.render(mdfile=md_file, title=title)
 
-        with open(os.path.join('output', html_file), 'w') as f:
+        with open(html_file, 'w') as f:
             f.write(rendered_template)
 
-    with open('output/index.html', 'w') as f:
+    with open('index.html', 'w') as f:
         f.write(index_tmpl.render(slides=md_files))
 
 if __name__ == '__main__':
