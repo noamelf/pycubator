@@ -1,30 +1,32 @@
 # Compound Data Types
-<!-- .slide: data-background="img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
-## Overview
+
+### Overview
 - Data types that are compound of smaller pieces, example: a string is made up from smaller strings containg  a single character.
 - Support similar methods, although each type has it's own unique qualities and will be effective in certain use cases (and not others).
 - Types included are: string, tuple, list, dictionary, set.
 
 ---
+
 # String
-<!-- .slide: data-background="img/string.jpg" --> 
+<!-- .slide: data-background="img/string.jpg" -->
 
 --
 ## Basics
-- Holds a string of charcters. 
+- Holds a string of charcters.
 - `'x'` or `"x"` for single lines.
 - `'''x'''` for multiple lines
 - Immutable
 
 --
-## Slicing 
+## Slicing
 - Index with square brackets: `s[1]`
-- Negative indexing gets elements from the end of list: `s[-1]` 
+- Negative indexing gets elements from the end of list: `s[-1]`
 - Slices:
   - Basic syntax is `s[start:end]`: `s[1:4]`
-  - Slicing from the beginning of the string: `s[:5]` 
+  - Slicing from the beginning of the string: `s[:5]`
   - Slicing untill the end of the string: `s[3:]`
   - Negative indexes cam also be used in slices: `s[-3:-1]`
 
@@ -55,7 +57,7 @@
 - Use `{name}` and then `s.format(name=arg)` for named args
 - `{!s} {!r} {!a}` call `str()`, `repr()` or `ascii()` before substitution
 - `{:4}{:7}` at least x number of chars
-- `{:b}{:x}` formats number as binary or hex 
+- `{:b}{:x}` formats number as binary or hex
 
 
 --
@@ -65,18 +67,18 @@
 
 ---
 # Tuple
-<!-- .slide: data-background="img/tulips.jpg" --> 
+<!-- .slide: data-background="img/tulips.jpg" -->
 --
 ## Overview
 - Tuples are used for grouping ordered data
 - Support indexing and slicing syntax
 - Immutable
-- Powerful assigment feature (packing/unpacking) 
+- Powerful assigment feature (packing/unpacking)
 
 --
 ## Basics
 - Syntax `(1, 2, 'hi')` or just `1, 2, 'hi'` (be careful)
-- `tuple()` construct a tuple from other iteratables 
+- `tuple()` construct a tuple from other iteratables
 - Supports nested tuples `((1, 2), (3, 4))`
 - Concatenating two tuples with + creates a new tuple.
 - Accessed with `t[1]` or `t[1][2]` if nested
@@ -91,14 +93,14 @@
 
 --
 ## Powerful assigments
-- `x = 1,` 
+- `x = 1,`
 - `x, y = 'hi', 'man'`
 - `x, y = y, x`
 - `return x,y`
 
 ---
 # List
-<!-- .slide: data-background="img/list.jpg" --> 
+<!-- .slide: data-background="img/list.jpg" -->
 --
 ## Basics
 - An ordered collection of values
@@ -126,10 +128,10 @@
 
 ---
 # Dictionary
-<!-- .slide: data-background="img/dictionary.jpg" --> 
+<!-- .slide: data-background="img/dictionary.jpg" -->
 
 --
-## Basics   
+## Basics
 - A dictionary is a hash map:
   - It hashes the keys to lookup values
   - Keys must be immutable so that the hash doesn't change
@@ -156,7 +158,7 @@
 
 ---
 ## Set
-<!-- .slide: data-background="img/set.png" --> 
+<!-- .slide: data-background="img/set.png" -->
 
 --
 ## Basics
@@ -186,7 +188,7 @@
 
 ---
 # More On Sequences
-<!-- .slide: data-background="img/sequences.jpg" --> 
+<!-- .slide: data-background="img/sequences.jpg" -->
 
 --
 ## Builtins
@@ -225,7 +227,7 @@ for y in lst2:
     inter = []
     for x in lst1:
         inter.append(x)
-```     
+```
 - Becomes that:
 ```python
 [[x for x in lst1] for y in lst2]

@@ -1,3 +1,6 @@
+# Basic data types
+<!-- .slide: data-background="img/monty-python.jpg" -->
+
 ---
 
 ### Datatypes overview
@@ -6,16 +9,14 @@
 *   Booleans (True, False)
 *   Integers, Floats
 *   Sequences
-
 *   Lists
 *   Tuples
 *   Strings
 *   Dictionaries
-
 *   Classes and class instances
 *   Modules and packages
 
----
+--
 
 ### Booleans
 
@@ -28,59 +29,19 @@
 
 *   Everything else acts like `True`
 
----
+--
 
 ### Boolean operations
 
-These are the Boolean operations, ordered by ascending priority:
+| Operation | Result
+| --------- | ---------------------------------------------
+|`x or y`   | if `x` is `False`, then `y`, else `x`
+|`x and y`  | if `x` is `False`, then `x`, else `y`
+|`not x`    | if `x` is `False`, then `True`, else `False`
 
-<table class="fragment">
+`and`, `or` are **short-circuit** operators
 
-<thead valign="bottom">
-
-<tr>
-
-<th class="head">Operation</th>
-
-<th class="head">Result</th>
-
-</tr>
-
-</thead>
-
-<tbody valign="top">
-
-<tr>
-
-<td>`x or y`</td>
-
-<td>if _x_ is false, then _y_, else _x_</td>
-
-</tr>
-
-<tr>
-
-<td>`x and y`</td>
-
-<td>if _x_ is false, then _x_, else _y_</td>
-
-</tr>
-
-<tr>
-
-<td>`not x`</td>
-
-<td>if _x_ is false, then _True_, else _False_</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-<small>*and, or are short-circuit operators</small>
-
----
+--
 
 ### Boolean examples
 
@@ -112,7 +73,7 @@ Go to socrative quiz!
 *   No i++ or ++i, but we do have += and -=
 *   Int and Float:
 
-    >>> type(2)                        
+    >>> type(2)
     int
 
     >>> type(2.5)
@@ -130,7 +91,7 @@ Go to socrative quiz!
 ### Assignments
 
     >>> a = b = 0
-    >>> a, b = 3, 5                    
+    >>> a, b = 3, 5
 
 Super cool:
 
@@ -138,7 +99,7 @@ Super cool:
     >>> a
     5
     >>> b
-    3                                       
+    3
 
 ---
 
@@ -148,16 +109,16 @@ Super cool:
     True
 
     >>> 'hello' == 'hello'
-    True                
+    True
 
     >>> 1 != 2
-    True                
+    True
 
     >>> 5 > 3
-    True                
+    True
 
     >>> 'b' > 'a'
-    True                
+    True
 
 ---
 
@@ -194,7 +155,7 @@ Super cool:
             break
         print(i, end=' ')
 
-    0 1 2 4 5 6 7              
+    0 1 2 4 5 6 7
 
 ---
 
@@ -221,8 +182,8 @@ Super cool:
 ### Functions
 
     >>> def increment(x):
-            return x + 1                    
-    >>> increment(3) 
+            return x + 1
+    >>> increment(3)
     4
 
 *   Colon (:) indicates start of a block

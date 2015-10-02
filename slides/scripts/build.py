@@ -4,7 +4,6 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 import os
 
-
 get_tmpl = Environment(loader=FileSystemLoader('templates/')).get_template
 
 
@@ -22,7 +21,15 @@ def get_md_files():
             yield md_file, extract_slide_title(md_file)
 
 
+def pre_clean():
+    p = Path('.')
+    for i in p.glob('*.html'):
+        i.unlink()
+
+
 def main():
+    pre_clean()
+
     slide_tmpl, index_tmpl = get_tmpl('slide.j2'), get_tmpl('index.j2')
 
     md_files = [(str(md_file), md_file.with_suffix('.html').name, title)
@@ -36,6 +43,7 @@ def main():
 
     with open('index.html', 'w') as f:
         f.write(index_tmpl.render(slides=md_files))
+
 
 if __name__ == '__main__':
     sys.exit(main())

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Pycubator|Datatypes overview</title>
+    <title>Pycubator|Basic data types</title>
 
     <meta name="author" content="Noam Elfanbaum">
 
@@ -39,7 +39,7 @@
 
 <div class="reveal">
     <div class="slides">
-        <section data-markdown="content/data-types.md" data-separator="^---" data-separator-vertical="^--"
+        <section data-markdown="content/2-data-types.md" data-separator="^---" data-separator-vertical="^--"
                  data-separator-notes="^Note:" data-charset="iso-8859-15">
         </section>
     </div>
@@ -47,8 +47,6 @@
 <script src="revealjs/lib/js/head.min.js"></script>
 <script src="revealjs/js/reveal.js"></script>
 <script>
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
         controls: true,
         progress: true,
@@ -91,7 +89,35 @@
         }]
     });
 </script>
+<div class="share-reveal"
+     style="display: none; position: absolute; top: 16px; left: 10px; z-index: 20;">
+    <a class="share-reveal-editor" href="index.html">Back to index</a>
+</div>
 
-</body>
+<style>
+    .share-reveal a {
+        display: inline-block;
+        height: 34px;
+        line-height: 34px;
+        padding: 0 10px;
+        color: #fff;
+        font-family: Helvetica, serif;
+        text-decoration: none;
+        font-size: 12px;
+        vertical-align: top;
+        text-transform: uppercase;
+        box-sizing: border-box;
+    }
+
+    .share-reveal-editor {
+        border: 1px solid #fff;
+    }
+</style>
+
+<script>
+    if (!navigator.userAgent.match(/(iphone|android)/gi) && !!document.querySelector) {
+        document.querySelector('.share-reveal').style.display = 'block';
+    }
+</script>
 
 </html>
