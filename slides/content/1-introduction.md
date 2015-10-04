@@ -1,9 +1,7 @@
-# Introduction
 <!-- .slide: data-background="img/monty-python.jpg" -->
+# Introduction
 
 ### Pycubator
-
-[@noamelf](http://twitter.com/noamelf)
 
 ---
 
@@ -24,7 +22,7 @@
 
 --
 
-#### Java
+### Java
 
     public class Hello{
       public static void main(String[] args){
@@ -34,7 +32,7 @@
 
 --
 
-#### C++
+### C++
 
     #include <iostream>
 
@@ -44,7 +42,7 @@
     }
 --
 
-#### Python
+### Python
 
     print('Hello World!')
 
@@ -86,23 +84,7 @@
     >>>print('hello world!')
     hello world!
 
-
---
-
-### Try it yourself
-
-    >>> 1 + 1
-    2
-    >>> print('hello world')
-    hello world
-    >>> x = 1
-    >>> y = 2
-    >>> x + y
-    3
-    >>> print(x)
-    1
-
-* To exit use `ctrl+d` on *unix, and `ctrl+z` on windows.
+* To exit use `ctrl+d` on *nix, and `ctrl+z` on windows.
 
 --
 
@@ -116,6 +98,7 @@
 ---
 
 # IPython
+### (REPL on steroids)
 <!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
@@ -125,33 +108,26 @@
 
 --
 
-### Advantages over the REPL
+### Cool features
 
-* Auto-completion
-* Magic functions
-* IPython notebook
-
---
-
-### IPython installation
-
-    $ sudo pip install ipython[all]
-    $ ipython
+* Use `tab` for autocomplete.
+* Append a `?` to an end of a variable, a function, a class and more to get some help.
+* `%magic` commands are really cool. Try `%history`, `%save` and `%pastebin` for example.
 
 ---
 
-# `.py` files
+# .py files
 <!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
-### `.py` files
+### .py files
 
 * Python source files
 * (No compilation needed)
 
 --
 
-### `.py` files
+### .py files
 
 ![gedit](img/gedit-hello-world.png)
 
@@ -161,10 +137,53 @@
 
 ---
 
-# Final words
+# Let's play!
 <!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
+
+### Python as a calculator
+
+Try running this in your python shell:
+
+    >>> 10 + 10
+    20
+    >>> 50 * 2
+    100
+    >>> 10 + 20 * 3
+    70
+    >>> (10 + 20) * 3
+    90
+
+* What does `**` do?
+* What does `%` do?
+
+--
+
+### Integers
+
+* What do you get when you run this:
+
+        >>> 10 / 3
+
+--
+
+### Floats
+
+Float values always include a decimal mark:
+
+    >>> 10.0 / 4.0
+    2.5
+
+What happens when you divide an int by a float, a float by an int?
+
+---
+
+# Some more theory
+<!-- .slide: data-background="img/puzzles.jpg" -->
+
+--
+
 ### Python qualities
 
 * Compromise between shell script and C++/Java program
@@ -186,17 +205,4 @@
     * No need to compile to machine language
     * Essentially, source code can be run directly
 
---
 
-### Style overview
-
-* [PEP 8](https://www.python.org/dev/peps/pep-0008/) - code is read much more often than it is written
-* Blocks are denoted by whitespace
-* Use spaces, not tabs (or set the editor to insert spaces instead of tabs)
-* Single line comments are denoted with #
-* Multi-line comments are denoted with '''
-* Variable and function names should be lower case with underscores separating words
-* Use docstrings to document what a function does:
-    def add(x,y):
-    """ Adds two numbers """
-        return x + y

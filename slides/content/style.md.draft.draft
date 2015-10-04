@@ -1,0 +1,15 @@
+--
+
+### Style overview
+
+* [PEP 8](https://www.python.org/dev/peps/pep-0008/) - code is read much more often than it is written
+* Blocks are denoted by whitespace
+* Use spaces, not tabs (or set the editor to insert spaces instead of tabs)
+* Single line comments are denoted with #
+* Multi-line comments are denoted with '''
+* Variable and function names should be lower case with underscores separating words
+* Use docstrings to document what a function does:
+
+    def add(x,y):
+    """ Adds two numbers """
+        return x + y

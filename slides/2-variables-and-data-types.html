@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Pycubator|Python basics course</title>
+    <title>Pycubator|Variables and data types</title>
 
     <meta name="author" content="Noam Elfanbaum">
 
@@ -39,7 +39,7 @@
 
 <div class="reveal">
     <div class="slides">
-        <section data-markdown="content/ubuntu-intro.md" data-separator="^---" data-separator-vertical="^--"
+        <section data-markdown="content/2-variables-and-data-types.md" data-separator="^---" data-separator-vertical="^--"
                  data-separator-notes="^Note:" data-charset="iso-8859-15">
         </section>
     </div>
@@ -89,13 +89,13 @@
         }]
     });
 </script>
-<div class="share-reveal"
+<div class="back-to-index"
      style="display: none; position: absolute; top: 16px; left: 10px; z-index: 20;">
-    <a class="share-reveal-editor" href="index.html">Back to index</a>
+    <a href="index.html">Back to index</a>
 </div>
 
-<style>
-    .share-reveal a {
+<style scoped>
+    .back-to-index a {
         display: inline-block;
         height: 34px;
         line-height: 34px;
@@ -107,17 +107,20 @@
         vertical-align: top;
         text-transform: uppercase;
         box-sizing: border-box;
-    }
-
-    .share-reveal-editor {
         border: 1px solid #fff;
     }
+
+    .reveal code {
+        font-size: 90%;
+        background: #3F3F3F;
+    }
+
 </style>
 
 <script>
     if (!navigator.userAgent.match(/(iphone|android)/gi) && !!document.querySelector) {
-        document.querySelector('.share-reveal').style.display = 'block';
+        document.querySelector('.back-to-index').style.display = 'block';
     }
 </script>
-
+</body>
 </html>
