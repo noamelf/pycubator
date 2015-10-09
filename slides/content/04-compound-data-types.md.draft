@@ -1,24 +1,19 @@
-# Compound Data Types
+# Compound data types
 <!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
 
 ### Overview
-- Data types that are compound of smaller pieces, example: a string is made up from smaller strings containg  a single character.
-- Support similar methods, although each type has it's own unique qualities and will be effective in certain use cases (and not others).
+- Data types that are compound of smaller pieces, example: a string is made up from smaller strings
+ containing  a single character.
+- Support similar methods, although each type has it's own unique qualities and will be effective in
+ certain use cases (and not others).
 - Types included are: string, tuple, list, dictionary, set.
 
 ---
 
-# String
+# More with Strings!
 <!-- .slide: data-background="img/string.jpg" -->
-
---
-## Basics
-- Holds a string of charcters.
-- `'x'` or `"x"` for single lines.
-- `'''x'''` for multiple lines
-- Immutable
 
 --
 ## Slicing
@@ -27,47 +22,15 @@
 - Slices:
   - Basic syntax is `s[start:end]`: `s[1:4]`
   - Slicing from the beginning of the string: `s[:5]`
-  - Slicing untill the end of the string: `s[3:]`
+  - Slicing until the end of the string: `s[3:]`
   - Negative indexes cam also be used in slices: `s[-3:-1]`
 
---
-## Methods
-- `s.split(sep)`: returns a list of substrings separated by sep
-- `s.strip()`: strips whitespace from ends
-- `s.strip('abc')`: specify non-whitespace chars to remove (each separtly)
-- `s.isspace()`: returns True if all chars in s are whitespace
-- `s.lower()`: converts all characters to lowercase
-
---
-## Join
-- `s.join(str_list)`: concatenates the strings in `str_list` with s as a separator.
-- When s is empty string: efficient way to concatenate strings
-- Use space as s to join words with spaces
-
---
-## Find and replace
-- `s.find(sub)`: finds the starting index of the first occurrence of sub in s
-- `s.replace(old,new)`: replaces all occurrences of old in s with new
-
---
-## Formating (1)
-- `s.format(arg1,arg2)`: replaces `{}` in s with args
-- `{name!conversion:format}` provides options on top of `{}`
-- Use `{0}{1}...{n}` to refer to positional arguments
-- Use `{name}` and then `s.format(name=arg)` for named args
-- `{!s} {!r} {!a}` call `str()`, `repr()` or `ascii()` before substitution
-- `{:4}{:7}` at least x number of chars
-- `{:b}{:x}` formats number as binary or hex
-
-
---
-## formating (2)
-- Lots of other stuff in [Format Specification Mini-Language](https://docs.python.org/2/library/string.html#format-specification-mini-language).
-- [More examples](https://docs.python.org/2/library/string.html#format-examples)
 
 ---
+
 # Tuple
 <!-- .slide: data-background="img/tulips.jpg" -->
+
 --
 ## Overview
 - Tuples are used for grouping ordered data

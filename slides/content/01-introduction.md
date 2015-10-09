@@ -5,11 +5,6 @@
 
 ---
 
-# Py...what?
-<!-- .slide: data-background="img/puzzles.jpg" -->
-
---
-
 ### About
 
 * Guido Van-Rossum side project in the late 1980's
@@ -134,6 +129,21 @@
     $ python /tmp/example.py
     hello world!
 
+--
+### IDE - PyCharm
+
+[PyCharm](https://www.jetbrains.com/pycharm/) is a great python IDE.
+A commercial and a community versions are available for download.
+
+Here are some tips for PyCharm:
+
+-   You can set up both python 2 and python 3 side by side.
+-   Use `Alt+Enter` for quick fixes, including *auto import* (which is very useful).
+-   Use `Ctrl+Shift+A` to find any command or setting!
+-   Use `Ctrl+Alt+L` to reformat your code.
+-   Use `Ctrl+Shift+F10` to run the current file.
+-   Use `Shift+F10` to run again the last file.
+-   Use `Ctrl+Space` for method/variable autocomplete.
 
 ---
 

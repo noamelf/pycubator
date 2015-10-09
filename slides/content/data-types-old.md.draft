@@ -84,7 +84,9 @@ Super cool:
 
 ### Ranges
 
-*   range(n) produces [0, 1, ..., n-1]*   range(i, j) produces [i, i+1, ..., j-1]*   range(i, j, k) produces [i, i+k, ..., m]
+*   range(n) produces [0, 1, ..., n-1]
+*   range(i, j) produces [i, i+1, ..., j-1]
+*   range(i, j, k) produces [i, i+k, ..., m]
 
     >>> range(5, 25, 3)
     [5, 8, 11, 14, 17, 20, 23]

@@ -157,7 +157,7 @@ And what about `not 3`?
 The following string literals are equivalent:
 
     "Hello World!"
-    'Hello World!"
+    'Hello World!'
     """Hello World!"""
     '''Hello World!'''
 
@@ -204,19 +204,19 @@ in Python docs for more information.
 
 To disable escape sequences, raw string literals can be used:
 
-    >>> print "c:\windows\newstuff\todo"  # OOPS!
+    >>> print('c:\windows\newstuff\todo')  # OOPS!
     c:\windows
     ewstuff odo
-    >>> print r"c:\windows\newstuff\todo" # Better.
+    >>> print(r'c:\windows\newstuff\todo') # Better.
     c:\windows\newstuff\todo
 
 --
 
 Sadly, raw string literals cannot end with a backslash:
 
-    >>> print r"c:\work\"
+    >>> print(r'c:\work\')
     SyntaxError:...
-    >>> print r"c:\work" + "\\"  # workaround.
+    >>> print(r'c:\work' + '\\')  # workaround.
     c:\work\
 
 ---
@@ -271,7 +271,6 @@ All the methods bellow return new string (there is no in place operations!).
 
         'hello, and ,welcome'.split(',', maxsplit=1) # -> ['hello', ' and ,welcome']
 
-
 *   splitlines - splits and leaves the `\n` out
 
         '''hi
@@ -287,4 +286,72 @@ All the methods bellow return new string (there is no in place operations!).
 
 *   strip, rstrip, lstrip - removes spaces and new lines from the ends of a string:
 
-        "     hello!    \n".strip() # -> "hello!"
+        '     hello!    \n'.strip() # -> 'hello!'
+
+---
+
+# String formatting
+
+--
+### Basic formating
+
+    # getting user input
+    name = input() # python3
+    name = raw_input() # python2
+
+    # old style formatting
+    print('Hello %s!' % name)
+
+    # new style formatting
+    print('Hello {}!'.format(name))
+
+--
+### More formating
+-   Named formatting
+
+        >>> '{name} {age}'.format(age=5, name='Mike')
+        mike 5
+
+-   `{:4}{:7}` at least x number of chars
+-   `{:b}{:x}` formats number as binary or hex
+-   in short,`{name!conversion:format}` provides options on top of `{}`
+
+--
+### Resources
+-   [Format Specification Mini-Language](https://docs.python.org/2/library/string.html#format-specification-mini-language).
+-   [Examples](https://docs.python.org/2/library/string.html#format-examples)
+-   [String Formatting Cookbook](http://ebeab.com/2012/10/10/python-string-format/)
+-   [Common use cases](http://pyformat.info/)
+
+
+--
+###### Excercise 1
+
+Complete the following code:
+
+    name = 'joe'
+    sons = 2
+    daughters = 3
+
+    # ----- ENTER YOUR CODE HERE --------
+    s = ''
+    # -----------------------------------
+
+    print(s)
+    assert s == 'Joe has 5 kids.'
+
+--
+###### Excercise 2
+
+Use the code from the previous exercise to write a short program that asks
+ the user for input and prints the answer as following:
+
+    What is the parent name?
+    > joe
+    How many sons does he have?
+    > 2
+    How many daughters does he have?
+    > 3
+    Joe has 5 kids.
+
+
