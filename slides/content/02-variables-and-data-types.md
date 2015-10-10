@@ -290,14 +290,40 @@ All the methods bellow return new string (there is no in place operations!).
 
 ---
 
+# Interactive Input
+<!-- .slide: data-background="img/input.png" -->
+
+--
+### Interactive Input
+
+- `input()` will read up to a newline
+- `input(prompt)` prints `str(prompt)` before reading input
+- Python2 and Python3 difference:
+    - Python3 `input()` is like Python2 `raw_input()`
+    - Python2 `input()` actually does `eval(raw_input())`
+
+--
+### Practice
+Read line from user and print them to screen. Stop when user types 'end'.
+For example, if the user types:
+
+    hi
+    noam
+    end
+
+
+Screen will show:
+
+    hi
+    noam
+
+
+---
+
 # String formatting
 
 --
 ### Basic formating
-
-    # getting user input
-    name = input() # python3
-    name = raw_input() # python2
 
     # old style formatting
     print('Hello %s!' % name)
