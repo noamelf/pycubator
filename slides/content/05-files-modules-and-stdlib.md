@@ -1,4 +1,4 @@
-# Files, modules and stdlib
+# Files, modules and the stdlib
 ### Pycubator
 
 ---

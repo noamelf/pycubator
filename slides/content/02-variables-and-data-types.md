@@ -5,7 +5,7 @@
 
 ---
 
-# Variables
+# Variables and comparisions
 
 --
 
@@ -57,18 +57,18 @@ According to Python conventions, variable names should be lowercase with words s
 
 ### Name errors
 
-What happens if you try to get the value of a variable that doesn't exist?
+-   What happens if you try to get the value of a variable that doesn't exist?
 
-    >>> x = 100
-    >>> x
-    100
-    >>> y
-    NameError: name 'y' is not defined
+        >>> x = 100
+        >>> x
+        100
+        >>> y
+        NameError: name 'y' is not defined
 
-In a python script, each variable must be assigned before it is accessed:
+-   In a python script, each variable must be assigned before it is accessed:
 
-    print x  # This line raises NameError
-    x = 1
+        print x  # This line raises NameError
+        x = 1
 
 --
 
@@ -92,9 +92,32 @@ Variables ("names") can be deleted with del:
     >>> a
     60
 
-This is the same as writing: `a = a + 10`
+-   This is the same as writing: `a = a + 10`
+-   Try: `-=`, `*=`, `/=`, `//=`, `%=` and `**=`.
 
-Try: `-=`, `*=`, `/=`, `//=`, `%=` and `**=`.
+--
+### Comparisons
+
+-   Each data type has a specific behaviour when met with a comparison operator differently
+-   We'll see more of that in the next slides but let's checkout some examples now:
+
+        >>> 1 > 2
+        True
+        >>> 'abc' > 'abd'
+        True
+
+--
+
+| Operation | Meaning                        |
+| --------- | ------------------------------ |
+| `<`       | strictly less than             |
+| `<=`      | less than or equal             |
+| `>`       | strictly greater than          |
+| `>=`      | greater than or equal          |
+| `==`      | equal                          |
+| `!=`      | not equal                      |
+| `is`      | object identity                |
+| `is not`  | negated object identity        |
 
 ---
 
@@ -115,12 +138,11 @@ Let's run them through an "if" statement:
 --
 
 ### Booleans and other types
-The following act like `False`:
-*   `None`
-*   `0`
-*   `[]`(or any other empty sequence)
-
-Everything else acts like `True`
+-   The following act like `False`:
+    -   `None`
+    -   `0`
+    -   `[]`(or any other empty sequence)
+-   Everything else acts like `True`
 
 --
 
@@ -136,16 +158,15 @@ Everything else acts like `True`
 
 ### Short circuit
 
-The tables before shows that in Python `and` and `or` are **short-circuit** operators. Examples:
+-   The tables before shows that in Python `and` and `or` are **short-circuit** operators:
 
-    >>> 1 or True
-    1
+        >>> 1 or True
+        1
+        >>> True or 1
+        True
 
-    >>> True or 1
-    True
-
-What will be the result of `True and (2 + 2)`?
-And what about `not 3`?
+-   What will be the result of `True and (2 + 2)`?
+-   And what about `not 3`?
 
 ---
 
@@ -196,10 +217,12 @@ Notable escape sequences in string literals:
 
     "I wrote: \"Hello!\".\nHe wrote: \"Goodbye!\"."
 
-See [lexical analysis](http://docs.python.org/2/reference/lexical_analysis.html#string-literals)
-in Python docs for more information.
+-   See [lexical analysis][lex] in Python docs for more information.
+
+[lex]: http://docs.python.org/2/reference/lexical_analysis.html#string-literals
 
 --
+##### Extra
 ### Raw string literals
 
 To disable escape sequences, raw string literals can be used:
@@ -209,15 +232,6 @@ To disable escape sequences, raw string literals can be used:
     ewstuff odo
     >>> print(r'c:\windows\newstuff\todo') # Better.
     c:\windows\newstuff\todo
-
---
-
-Sadly, raw string literals cannot end with a backslash:
-
-    >>> print(r'c:\work\')
-    SyntaxError:...
-    >>> print(r'c:\work' + '\\')  # workaround.
-    c:\work\
 
 ---
 
@@ -303,7 +317,7 @@ All the methods bellow return new string (there is no in place operations!).
     - Python2 `input()` actually does `eval(raw_input())`
 
 --
-### Practice
+###### Exercise #1
 Read line from user and print them to screen. Stop when user types 'end'.
 For example, if the user types:
 
@@ -351,7 +365,7 @@ Screen will show:
 
 
 --
-###### Excercise 1
+###### Exercise #2
 
 Complete the following code:
 
@@ -367,7 +381,7 @@ Complete the following code:
     assert s == 'Joe has 5 kids.'
 
 --
-###### Excercise 2
+###### Exercise #3
 
 Use the code from the previous exercise to write a short program that asks
  the user for input and prints the answer as following:
@@ -379,5 +393,3 @@ Use the code from the previous exercise to write a short program that asks
     How many daughters does he have?
     > 3
     Joe has 5 kids.
-
-

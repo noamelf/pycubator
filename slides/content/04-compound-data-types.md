@@ -358,15 +358,15 @@ Example:
 ###### Excercise #2
 ### Letter Counter
 
-Count the number of letters in a sentence. Implement `letter_counter` and print its return value - each letter on a separate line.
+Count the number of letters in a sentence.
+Implement `letter_counter` and print its return value - each letter on a separate line
+(see code on next slide).
+
+--
+Boilerplate code:
 
     def letter_counter(s):
         """Returns the count of letters in s.
-
-        (string) -> dict
-        Returns a dictionary. Keys are lowercase letters, values are the number of
-        times this letter appears in the sentence (as a lowercase or an uppercase
-        letter).
         """
         # --- WRITE YOUR CODE HERE --- #
 
@@ -393,7 +393,7 @@ Count the number of letters in a sentence. Implement `letter_counter` and print 
 - Can de-duplicate a list: `list(set(lst))`
 
 --
-## Methods
+### Methods
 - `s.add(v)`: adds a value to set
 - `s.remove(v)`: removes v. will raise an error if v not in s
 - `s.discard(v)`: removes v. will not raise error
@@ -404,30 +404,23 @@ Count the number of letters in a sentence. Implement `letter_counter` and print 
 
 --
 ###### Excercise #3
-## Sets vs Lists
+### Sets vs Lists
 
-Create a program that:
-
--   Adds 10,000 distinct random numbers between 1 and 1,000,000 to a list
+-   Create a program that Adds 10,000 distinct random numbers between 1 and 1,000,000 to a list
 -   Generates 10,000 more random numbers between 1 and 1,000,000 and counts how many of them exists in the list.
-
-Do the same thing with a set instead of a list.
-
-Which method is faster? Why?
-
-Tips ->
+-   Do the same thing with a set instead of a list. Which method is faster? Why?
 
 --
 
-To generate a random number use:
+-   To generate a random number use:
 
-    import random
-    print(random.randint(1, 1000))
+        import random
+        print(random.randint(1, 1000))
 
-Use `time.time()` to measure how much time this takes:
+-   Use `time.time()` to measure how much time this takes:
 
-    import time
-    print(time.time())
+        import time
+        print(time.time())
 
 
 ---
@@ -447,7 +440,7 @@ Use `time.time()` to measure how much time this takes:
 - `sorted(x)`: returns new sorted list
 
 --
-## List Comprehensions
+### List Comprehensions
 - Compile a list with a one-liner.
 - `[expr for v in iter]`
 - `[expr for v in iter if cond]`
@@ -464,7 +457,7 @@ res = [v1 * v2 for v1, v2 in lst if v1 > v2]
 ```
 
 --
-## Nested List Comprehensions
+### Nested List Comprehensions
 - This:
 ```python
 res = []
@@ -479,7 +472,7 @@ for y in lst2:
 ```
 
 --
-## Dictionary Comprehensions
+### Dictionary Comprehensions
 - Like lists but swap `[]` for `{}`
 - This:
 ```python
@@ -493,7 +486,7 @@ for k, v in lst:
 ```
 
 --
-## Set Comprehensions
+### Set Comprehensions
 -   Like dictionaries but no `:`
 -   This:
 
@@ -507,7 +500,7 @@ for k, v in lst:
 
 
 --
-## Tuple Comprehensions?
+### Tuple Comprehensions?
 ```python
 tup = (x for x in lst)
 type(tup)
@@ -523,6 +516,7 @@ Using list comprehension, `join()` and `split()`, create a function that does th
 
     def funny(s):
         # === YOUR CODE HERE! ===
+
         # =======================
         pass
 
@@ -548,6 +542,7 @@ Create a function that returns a list with the number of letters in each word in
 
     def word_lengths(s):
         # ==== YOUR CODE HERE ===
+
         # =======================
 
 
@@ -565,6 +560,7 @@ Now create a function that returns the length of the longest word in the provide
 
     def max_word_length(s):
         # ==== YOUR CODE HERE ===
+
         # =======================
 
     result = max_word_length("Contrary to popular belief Lorem Ipsum is not simply random text")

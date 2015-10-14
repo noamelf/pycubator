@@ -3,7 +3,7 @@
 
 ### Pycubator
 
----
+--
 
 ### About
 
@@ -45,7 +45,6 @@
 ---
 
 # Philosophy
-<!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
 
@@ -65,9 +64,8 @@
 
 ---
 
-<!-- .slide: data-background="img/puzzles.jpg" -->
 # The REPL
-##### (Read Evaluate Print Loop)
+(Read Evaluate Print Loop)
 
 --
 ### The REPL
@@ -94,7 +92,7 @@
 
 # IPython
 ### (REPL on steroids)
-<!-- .slide: data-background="img/puzzles.jpg" -->
+
 
 --
 
@@ -112,7 +110,7 @@
 ---
 
 # .py files
-<!-- .slide: data-background="img/puzzles.jpg" -->
+
 
 --
 ### .py files
@@ -132,38 +130,38 @@
 --
 ### IDE - PyCharm
 
-[PyCharm](https://www.jetbrains.com/pycharm/) is a great python IDE.
-A commercial and a community versions are available for download.
-
-Here are some tips for PyCharm:
-
+-   [PyCharm's website](https://www.jetbrains.com/pycharm/)
 -   You can set up both python 2 and python 3 side by side.
 -   Use `Alt+Enter` for quick fixes, including *auto import* (which is very useful).
 -   Use `Ctrl+Shift+A` to find any command or setting!
 -   Use `Ctrl+Alt+L` to reformat your code.
+
+--
+
 -   Use `Ctrl+Shift+F10` to run the current file.
 -   Use `Shift+F10` to run again the last file.
 -   Use `Ctrl+Space` for method/variable autocomplete.
+-   A commercial and a community versions are available for download.
 
 ---
 
 # Let's play!
-<!-- .slide: data-background="img/puzzles.jpg" -->
+
 
 --
 
 ### Python as a calculator
 
-Try running this in your python shell:
+*   Try running this in your python shell:
 
-    >>> 10 + 10
-    20
-    >>> 50 * 2
-    100
-    >>> 10 + 20 * 3
-    70
-    >>> (10 + 20) * 3
-    90
+        >>> 10 + 10
+        20
+        >>> 50 * 2
+        100
+        >>> 10 + 20 * 3
+        70
+        >>> (10 + 20) * 3
+        90
 
 * What does `**` do?
 * What does `%` do?
@@ -180,17 +178,17 @@ Try running this in your python shell:
 
 ### Floats
 
-Float values always include a decimal mark:
+-   Float values always include a decimal mark:
 
-    >>> 10.0 / 4.0
-    2.5
+        >>> 10.0 / 4.0
+        2.5
 
-What happens when you divide an int by a float, a float by an int?
+-   What happens when you divide an int by a float, a float by an int?
 
 ---
-
+##### Extra
 # Some more theory
-<!-- .slide: data-background="img/puzzles.jpg" -->
+
 
 --
 
@@ -215,4 +213,22 @@ What happens when you divide an int by a float, a float by an int?
     * No need to compile to machine language
     * Essentially, source code can be run directly
 
+--
 
+### Style overview
+
+-    [PEP 8](https://www.python.org/dev/peps/pep-0008/) - code is read much more often than it is written
+-    Blocks are denoted by whitespace
+-    Use spaces, not tabs (or set the editor to insert spaces instead of tabs)
+-    Single line comments are denoted with #
+-    Multi-line comments are denoted with '''
+
+--
+
+-    Variable and function names should be lower case with underscores separating words
+-    Use docstrings to document what a function does:
+
+
+        def add(x,y):
+        """ Adds two numbers """
+            return x + y

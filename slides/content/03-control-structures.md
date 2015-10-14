@@ -8,6 +8,23 @@
 # If and While
 
 --
+### Simple if
+
+    x = input()
+    if x > 5:
+        msg = 'Higher than five'
+    elif x == 5:
+        msg = 'Equels five'
+    else:
+        msg = 'Lower than five'
+
+--
+### Trinary operator
+
+    x = input()
+    msg = 'Higher than five' if x > 5 else 'Equel or lower than five'
+
+--
 ### Simple while
 
     while True:
@@ -76,6 +93,7 @@ Whenever the user enters an empty answer, show the sum of all entered numbers an
 
 
 --
+##### Extra
 ###### Excersice #4
 ### Fibonacci
 
@@ -234,7 +252,7 @@ Sample Output:
 *   Colon (:) indicates start of a block
 *   Following lines are indented
 *   Function declaration doesnt specify return type
-*   all functions return a value (None if not specified)
+*   All functions return a value (None if not specified)
 *   Parameter data types are not specified either
 
 --
