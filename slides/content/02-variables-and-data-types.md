@@ -367,29 +367,4 @@ Screen will show:
 --
 ###### Exercise #2
 
-Complete the following code:
-
-    name = 'joe'
-    sons = 2
-    daughters = 3
-
-    # ----- ENTER YOUR CODE HERE --------
-    s = ''
-    # -----------------------------------
-
-    print(s)
-    assert s == 'Joe has 5 kids.'
-
---
-###### Exercise #3
-
-Use the code from the previous exercise to write a short program that asks
- the user for input and prints the answer as following:
-
-    What is the parent name?
-    > joe
-    How many sons does he have?
-    > 2
-    How many daughters does he have?
-    > 3
-    Joe has 5 kids.
+see string formatting at (part 1&2): http://lms.10x.org.il/item/123/

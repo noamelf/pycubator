@@ -41,7 +41,7 @@ The National Archives UK
 - `f.writelines(sequence)` writes sequence content (without adding newlines)
 
 --
-###### Excercise #1
+###### Exercise #1
 ### Simple reader
 Read a file one line at a time, and print the number of the line
 (start with one) and the line content. For example, for this input:
@@ -59,41 +59,10 @@ The output will be:
 
 
 --
-###### Excercise #2
+###### Exercise #2
 ### Robot Position Tracker
 
--   A robot on an exploration mission receives command file in the following fashion:
-
-        North 100
-        East 200
-        South 20
-        East 50
-        North 100
-        West 30
-
---
-
--   Each command has a direction (North, East, South, West) and a distance (a number, in meters).
--   You have to write a program that remembers its position and returns its horizontal and vertical
-distance from the base station (the starting point).
--   For example, for the commands above the result
-will be (220,180).
-
---
-
--   Write a function that receives a filename, opens it, parses the commands and returns the distance
-in x and y from home:
-
-        def parse_commands(filename):
-            x, y = 0, 0
-            # --- WRITE YOUR CODE HERE --- #
-
-            # ---------------------------- #
-            return x, y
-
-        result = parse_commands('journey.txt')
-        print "Result:", result
-        assert (220, 180) == result
+See http://lms.10x.org.il/item/35/
 
 ---
 
@@ -377,30 +346,7 @@ in x and y from home:
 
 --
 
-###### Excercise #3
+###### Exercise #3
 ### File Information by Extension
--   Create a command line program that shows information about different file types in a specified
-folder. For example:
 
-        $ python ext_info.py .
-        png 16 2765632
-        py 1 2103
-        pyc 1 608
-        txt 10 34042
-        zip 3 4540097
-
-        $ python ext_info.py /home/udi/music/
-        m3u 12 97633
-        mp3 52 83654229
-
---
-
--   In the first example the current folder was checked (by specifying . on the command
-    line as the parameter). 16 files with the `png` extension were found,
-    with a total size of 2765632 bytes.
--   Implementation notes:
-    -   Sub-dirs should be ignored.
-    -   `jpg` and `JPG` are considered different extensions.
-    -   Files with no extensions should be included in the `'.'` extension instead.
-    -   Output should be sorted by extension using string (lexical) order.
-    -   Use `argparse` for the script arguments
+See http://lms.10x.org.il/item/91/

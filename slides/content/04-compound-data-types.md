@@ -260,30 +260,10 @@ Keep in mind this is a SHALLOW copy of l:
 (`copy.deepcopy` should be used to create a deep copy of lists)
 
 --
-###### Excercise #1
+###### Exercise #1
 ### Calculate Median
 
-Create a program that accepts numbers from the user, until a blank line is entered,
-and then prints the number of items, minimum, maximum, average and median of the numbers entered.
-(The median is the value of the middle number after sorting them. In case of even items, return the average of the two middle items).
-
-See example on the next slide ->
-
---
-Example:
-
-    > 10
-    > 15
-    > 20
-    > -40
-    > 90
-    >
-
-    Items: 5
-    Min: -40
-    Max: 90
-    Avg: 19
-    Median: 15
+See http://lms.10x.org.il/item/101/
 
 ---
 
@@ -355,28 +335,10 @@ Example:
 - Replace long `if x = a: elif x = b: elif...` with a dictionary lookup
 
 --
-###### Excercise #2
+###### Exercise #2
 ### Letter Counter
 
-Count the number of letters in a sentence.
-Implement `letter_counter` and print its return value - each letter on a separate line
-(see code on next slide).
-
---
-Boilerplate code:
-
-    def letter_counter(s):
-        """Returns the count of letters in s.
-        """
-        # --- WRITE YOUR CODE HERE --- #
-
-        # ---------------------------- #
-
-
-    result = letter_counter("Hello world!!! HELLO!")
-    print("First result:", result)
-    expected = {'e': 2, 'd': 1, 'h': 2, 'l': 5, 'o': 3, 'r': 1, 'w': 1}
-    assert result == expected
+See http://lms.10x.org.il/item/37/
 
 
 ---
@@ -403,25 +365,10 @@ Boilerplate code:
 - `s.update(s2)` or `s = s | s2`: updates s with s2 values
 
 --
-###### Excercise #3
+###### Exercise #3
 ### Sets vs Lists
 
--   Create a program that Adds 10,000 distinct random numbers between 1 and 1,000,000 to a list
--   Generates 10,000 more random numbers between 1 and 1,000,000 and counts how many of them exists in the list.
--   Do the same thing with a set instead of a list. Which method is faster? Why?
-
---
-
--   To generate a random number use:
-
-        import random
-        print(random.randint(1, 1000))
-
--   Use `time.time()` to measure how much time this takes:
-
-        import time
-        print(time.time())
-
+See http://lms.10x.org.il/item/90/
 
 ---
 
@@ -509,63 +456,8 @@ type(tup)
 - We'll cover generators later
 
 --
-###### Excercise #4
+###### Exercise #4
 ### Funny Reverse
 
-Using list comprehension, `join()` and `split()`, create a function that does this:
-
-    def funny(s):
-        # === YOUR CODE HERE! ===
-
-        # =======================
-        pass
-
-
-    assert funny("Foo bar") == "Oof Rab"
-    assert funny("The quick brown fox") == "Eht Kciuq Nworb Xof"
-
-Tips -->
-
---
-
-`.split()` and `.join()` examples:
-
-    'hello world'.split()  # -> ['hello', 'world']
-    ' '.join(['hello', 'world'])  # -> 'hello world'
-    '<br >'.join(['first line', 'second line'])  # -> 'first line<br >second line'
-
---
-###### Excercise #5
-### Sentence Statistics
-
-Create a function that returns a list with the number of letters in each word in the provided sentence:
-
-    def word_lengths(s):
-        # ==== YOUR CODE HERE ===
-
-        # =======================
-
-
-    result = word_lengths("Contrary to popular belief Lorem Ipsum is not simply random text")
-    print("Result:", result)
-    assert result == [8, 2, 7, 6, 5, 5, 2, 3, 6, 6, 4]
-    print("OK")
-
-
-Continue >>
-
---
-
-Now create a function that returns the length of the longest word in the provided sentence:
-
-    def max_word_length(s):
-        # ==== YOUR CODE HERE ===
-
-        # =======================
-
-    result = max_word_length("Contrary to popular belief Lorem Ipsum is not simply random text")
-    print("Result:", result)
-    assert result == 8
-    print("OK")
-
+See http://lms.10x.org.il/item/41/
 
