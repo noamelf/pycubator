@@ -71,14 +71,14 @@ See http://lms.10x.org.il/item/13/
 --
 ### For on a string
 
+    from __future__ import print_function
+
     >>> for c in "Hello World!":
             print(c, end=' ')
     H e l l o   W o r l d !
 
 --
 ### Using range()
-
-    from __future__ import print_function
 
     >>> for i in range(10):
             print(i, end=',')
