@@ -1,0 +1,15 @@
+--
+###### Exercise #1
+Read line from user and print them to screen. Stop when user types 'end'.
+For example, if the user types:
+
+    hi
+    noam
+    end
+
+
+Screen will show:
+
+    hi
+    noam
+

@@ -142,6 +142,7 @@ Let's run them through an "if" statement:
     -   `None`
     -   `0`
     -   `[]`(or any other empty sequence)
+    -   `''` (empty string)
 -   Everything else acts like `True`
 
 --
@@ -304,7 +305,7 @@ All the methods bellow return new string (there is no in place operations!).
 
 ---
 
-# Interactive Input
+# Interactive Input and string formatting
 <!-- .slide: data-background="img/input.png" -->
 
 --
@@ -317,27 +318,12 @@ All the methods bellow return new string (there is no in place operations!).
     - Python2 `input()` actually does `eval(raw_input())`
 
 --
-###### Exercise #1
-Read line from user and print them to screen. Stop when user types 'end'.
-For example, if the user types:
-
-    hi
-    noam
-    end
-
-
-Screen will show:
-
-    hi
-    noam
-
-
----
-
-# String formatting
-
---
 ### Basic formating
+
+    name = 'Tom'
+
+    # Bad style formatting
+    print('hello ' + name)
 
     # old style formatting
     print('Hello %s!' % name)
@@ -367,4 +353,4 @@ Screen will show:
 --
 ###### Exercise #2
 
-see string formatting at (part 1&2): http://lms.10x.org.il/item/123/
+See string formatting at (part 1&2): http://lms.10x.org.il/item/123/
