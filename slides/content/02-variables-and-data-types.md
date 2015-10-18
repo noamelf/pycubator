@@ -103,8 +103,11 @@ Variables ("names") can be deleted with del:
 
         >>> 1 > 2
         True
+        >>> 5 < 7 <= 10:
+        True
         >>> 'abc' > 'abd'
         True
+
 
 --
 
@@ -310,12 +313,9 @@ All the methods bellow return new string (there is no in place operations!).
 
 --
 ### Interactive Input
-
-- `input()` will read up to a newline
-- `input(prompt)` prints `str(prompt)` before reading input
-- Python2 and Python3 difference:
-    - Python3 `input()` is like Python2 `raw_input()`
-    - Python2 `input()` actually does `eval(raw_input())`
+- `raw_input()` on python2
+- `input()` on python3
+- `input(prompt)` prints `prompt` before reading input
 
 --
 ### Basic formating

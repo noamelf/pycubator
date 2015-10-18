@@ -3,6 +3,16 @@
 
 ### Pycubator
 
+--
+# Blocks
+-   All control structures (if, while/for, functions) content must be in a block.
+-   Block are determined by indentation.
+-   The pep8 style guides set 4 spaces to be the standard indentation.
+-   If you are using Tab to indent make sure your editor converts it to 4 spaces.
+
+        if True:
+            print('Yes it is')
+
 ---
 
 # If and While

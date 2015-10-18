@@ -33,30 +33,37 @@ The National Archives UK
 ### Reading
 - `f.read()` reads the whole file (up to `EOF`)
 - `f.read(index)` reads the file until `index`
-- `f.readline()` reads a line (up to `\n`)
+
+        # Prints each line of the file.
+        with open('example.txt') as f:
+            for l in f:
+                print(l)
 
 --
 ### Writing
-- `f.write(string)` writes string (without adding a newline)
-- `f.writelines(sequence)` writes sequence content (without adding newlines)
+- `f.write(string)` writes string (without adding `\n`)
+- `f.writelines(sequence)` writes sequence content (also without adding `\n`)
+
+        fruits = ['Bannana', 'Melon', 'Peach']
+        with open('example.txt', 'w') as f:
+            f.writelines(fruits)
 
 --
 ###### Exercise #1
 ### Simple reader
-Read a file one line at a time, and print the number of the line
-(start with one) and the line content. For example, for this input:
+-   Read a file one line at a time, and print the number of the line (start with one) and
+    the line content.
+-   For example, for this input:
 
-Ami
-Udi
-Assaf
+        Ami
+        Udi
+        Assaf
 
+-   The output will be:
 
-The output will be:
-
-1 Ami
-2 Udi
-3 Assaf
-
+        1 Ami
+        2 Udi
+        3 Assaf
 
 --
 ###### Exercise #2
@@ -79,76 +86,78 @@ See http://lms.10x.org.il/item/35/
 
 --
 
-### Modules and packages
+### Modules
 
--   tags.py:
+    # tags.py
+    def ul(items):
+        return tag('ul', "".join([li(x) for x in items])
 
-        def tag(name, content):
-            return "<{0}>{1}</{0}>".format(name, content)
+    # main.py (option 1)
+    import tags
+    print tags.ul('One', 'Two', 'Three')
 
-        def p(content):
-            return tag('p', content)
+    # main.py (option 2)
+    from tags import ul
+    print ul('One', 'Two', 'Three')
 
-        def li(content):
-            return tag('li', content)
+--
+### Packages
 
-        def ul(items):
-            return tag('ul', "".join([li(x) for x in items])
+-   Packages are namespaces which contain multiple packages and modules themselves.
+-   Packages are simply directories, but in python2 there is a twist: each package/directory
+    MUST contain a special file called `__init__.py`
 
 --
 
--   main.py (option 1):
+    # fruits/__init__.py
+    # -- empty -- nothing here -- really nothing -- just a lonely, empty file
 
-        import tags
-        print tags.ul('One', 'Two', 'Three')
+    # fruits/apple.py
+    def say_in_hebglish(): print('Tapuach')
 
--   main.py (option 2):
-
-        from tags import ul
-        print ul('One', 'Two', 'Three')
-
---
-### Modules are singeltones
-
--   stuff.py:
-
-        words = ['hello']
-
--   a.py:
-
-        import stuff
-        def foo():
-            stuff.words.append('apple')
+    # main.py
+    from fruits import apple
+    apple.say_in_hebglish()
 
 --
 
--   b.py:
+-   If a folder contains an `__init__.py` file, it can be imported as the name of the package itself.
 
-        import stuff
-        def foo():
-            stuff.words.append('banana')
-
--   program.py:
-
-        import a, b, stuff
-        a.foo()
-        b.foo()
-        print(stuff.words)
-
-
---
-### \_\_init\_\_
-
--   If a folder contains an \_\_init\_\_.py file, it can be imported as the name of the folder as well.
--   foo/\_\_init\_\_.py:
-
+        # foo/__init__.py
         def greeting():
             return "Hello World!"
 
--   main.py:
-
+        # main.py
         from foo import greeting
         print greeting()
+
+--
+##### Extra
+### Modules are singeltones
+
+    # stuff.py
+    fruits = ['Pineapple']
+
+    # module_a.py
+    import stuff
+    def foo():
+        stuff.fruits.append('Apple')
+
+    # module_b.py
+    import stuff
+    def foo():
+        stuff.fruits.append('Banana')
+
+--
+
+    # program.py
+    import module_a, module_b, stuff
+    module_a.foo()
+    module_b.foo()
+    print(stuff.fruits)
+
+    # output
+    ['Pineapple', 'Apple', 'Banana']
 
 ---
 
@@ -189,6 +198,9 @@ See http://lms.10x.org.il/item/35/
 
 -   In large and long running programs we need more sophisticated printing.
 -   The logging package enables us to easily log the current state and timestamp of our program
+
+--
+
 -   Basic usage:
 
         logging.debug('Alltems operational')
@@ -202,9 +214,11 @@ See http://lms.10x.org.il/item/35/
         ERROR:root:Nol. Trying to glide.
         CRITICAL:root:Glide attempt failed. About to crash.
 
+-   Why can't we see the `debug` and `warning` messages?
+
 --
 
--   Why can't we see the debug and warning messages?
+-   We can determine the varbosity of the log with `setLevel`
 
         logging.root.setLevel(logging.DEBUG)
         logging.debug('Alltems operational')
@@ -213,7 +227,6 @@ See http://lms.10x.org.il/item/35/
         # output
         DEBUG:root:Alltems operational
         INFO:root:Airspeed knots
-
 
 --
 
@@ -226,6 +239,8 @@ See http://lms.10x.org.il/item/35/
 
         # output
         [DEBUG 2015-07-14 22:59:59,160 <ipython-input-60-8bd2b8d57226>:5]  you'll see a lot more information now...
+
+--
 
 -   Or logging to a file:
 

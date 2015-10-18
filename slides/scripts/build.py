@@ -4,7 +4,7 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 import os
 
-get_tmpl = Environment(loader=FileSystemLoader('templates/')).get_template
+get_tmpl = Environment(loader=FileSystemLoader('../templates/')).get_template
 
 
 def extract_slide_title(md_file):
@@ -15,7 +15,7 @@ def extract_slide_title(md_file):
 
 
 def get_md_files():
-    p = Path('content')
+    p = Path('../content')
     for md_file in sorted(p.iterdir()):
         if md_file.suffix == '.md':
             yield md_file, extract_slide_title(md_file)
