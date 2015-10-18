@@ -1,5 +1,5 @@
-# Basics
-<!-- .slide: data-background="img/puzzles.jpg" --> 
+# Exceptions
+<!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
 ## Python handles all errors with exceptions.
@@ -16,7 +16,7 @@ except:
     handle_gracefully()
 ```
 
-Don't do it. Catching too broad exceptions is potentially dangerous. 
+Don't do it. Catching too broad exceptions is potentially dangerous.
 Among others, this "wildcard" handler will catch:
 
 - system exit triggers
@@ -46,7 +46,7 @@ Catch the exception and tell the user he cannot divide by zero.
 
 # A bit more advanced
 <!-- .slide: data-background="img/puzzles.jpg" -->
- 
+
 --
 ## Catching multiple exceptions
 Handling them all the same way
@@ -133,14 +133,14 @@ This is useful for e.g. exception logging.
 ## Practice
 Read this [numbers.txt](misc/numbers.txt) file (don't use the `with` statement).
 Add the integers in the file together, and print the sum at the end.
-You need to except the following exceptions and let the user know the problem: 
+You need to except the following exceptions and let the user know the problem:
 - `IOError`: if there is a problem opening the file.
 - `ValueError`: if the line read is not an integer.
 - All other types: if any other exception arise, catch it and say 'unexpected error occurred'
 
 ---
 # More cool stuff
-<!-- .slide: data-background="img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
 ## Finally
@@ -188,9 +188,9 @@ except Exception as e:
 
 --
 
-## Exception matching 
+## Exception matching
 - exception hierarchies can be designed.
-- For example, `OverflowError`, `ZeroDivisionError` and `FloatingPointError` 
+- For example, `OverflowError`, `ZeroDivisionError` and `FloatingPointError`
 are all subclasses of `ArithmeticError`.
 - Just write a handler for `ArithmeticError` to catch any of them.
 
@@ -207,26 +207,26 @@ class MyException(Exception):
 --
 ## Practice
 Write your own exception!
-Create a function called `guess_my_name` that: 
-- Takes user input. 
+Create a function called `guess_my_name` that:
+- Takes user input.
 - Checks if the user guessed your name correctly
-- Throws an exception `NotMyName` if not.  
+- Throws an exception `NotMyName` if not.
 
 Call that function:
-- In a while loop, call that function, 
+- In a while loop, call that function,
 - if `NotMyName` exception is caught stay in the loop.
 - else exit and print 'success!'
 
 ---
 
 # LBYL vs EAFP
-<!-- .slide: data-background="img/puzzles.jpg" --> 
+<!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
 ## LBYL
 
 Look Before You Leap
-  
+
 >[...] explicitly tests for pre-conditions before making calls or
 lookups. This style contrasts with the EAFP approach and is
 characterized by the presence of many if statements.
@@ -234,7 +234,7 @@ characterized by the presence of many if statements.
 --
 
 ## EAFP
-Easier to Ask for Forgiveness than Permission  
+Easier to Ask for Forgiveness than Permission
 >[...] assumes the existence of valid keys or attributes and catches
 exceptions if the assumption proves false. This clean and fast style
 is characterized by the presence of many try and except
@@ -264,7 +264,7 @@ except IOError as e:
 
 ## When to use
 >"All errors are exceptions, but not all exceptions are errors"
-  
+
 Use exception handling to gracefully recover from application errors.
 But: It's perfectly allowed, and sometimes necessary, to utilize
 exception handling for general application control flow. EOFError, for example.
@@ -274,11 +274,11 @@ exception handling for general application control flow. EOFError, for example.
 ## Practice
 
 Write the following code in EAFP style
-```python 
+```python
 def check_dict(d, x):
     if x in d:
         val = d[x]
         return val
     else:
         return False
-``` 
+```
