@@ -88,17 +88,17 @@ See http://lms.10x.org.il/item/35/
 
 ### Modules
 
-    # tags.py
-    def ul(items):
-        return tag('ul', "".join([li(x) for x in items])
+    # utensils.py
+    def eat_soup():
+        return 'spoon'
 
     # main.py (option 1)
-    import tags
-    print tags.ul('One', 'Two', 'Three')
+    import utensils
+    print(utensils.eat_soup())
 
     # main.py (option 2)
-    from tags import ul
-    print ul('One', 'Two', 'Three')
+    from utensils import eat_soup
+    print(eat_soup())
 
 --
 ### Packages

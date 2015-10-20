@@ -157,24 +157,26 @@ def func(name: str, hight: float = 1.90)-> int:
 --
 
 ### Closures
-```python
-a = 42
-def func():
-    print(a)
-```
--   A function that knows about variable defined outside the function
--   `func` is a closure because it knows about `a`
--   Closures are read-only: adding `a += 1` inside `func()` will result in `UnboundLocalError` exception
+
+    def list_fruits():
+        fruits = ['bannana', 'apple']
+        def show():
+            print(fruits)
+
+-   A function that knows about variable defined outside it's scope.
+-   `show()` is a closure because it knows about `fruits`
+-   Closures are read-only: adding `fruits += ['kiwi']` inside `show()` will result
+    in `UnboundLocalError` exception.
 
 --
 
 ### Global
-```python
-a = 42
-def func():
-    global a
-    a += 1
-```
+
+    a = 42
+    def func():
+        global a
+        a += 1
+
 -   Changing global state can be dengerous, so Python requires you to declare it explictly
 -   `global` can circumvent read-only closures
 -   the `global` keyword declares certain variables in the current code block to reference the global scope
