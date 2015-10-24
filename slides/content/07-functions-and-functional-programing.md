@@ -1,6 +1,6 @@
 <!-- .slide: data-background="img/function.jpg" -->
 # Functions and functional programing
-#### Pycubator
+### Pycubator
 
 ---
 
@@ -10,7 +10,7 @@
 
 --
 
-#### Positional Arguments
+### Positional Arguments
 
     def func(arg1, arg2, arg3):
         pass
@@ -18,32 +18,42 @@
     func(a, b, c)
 
 -   `arg1`, `arg2` and `arg3` are positional arguments
--   When calling func exactly 3 arguments must be given, wrong number of args will
+-   When calling `func` exactly 3 arguments must be given, wrong number of args will
     result in a `TypeError`
 -   The order in the call determines which arg they are bound to
 -   The expressions (`a, b, c`) are evaluated before the call
 -   The value of `a` is bound to `arg1` in the body of func and so forth
 
+--
+### Named Arguments
+
+    def say(arg1, named1, named2):
+        print(arg1, named1, named2)
+
+    say('make', named2='day', named1='my')
+
+    # output
+    make my day
+
+-   Named arguments can be given out of order
+
 
 --
 
-#### Named Arguments
+### Default Arguments
 
     def func(arg1, named1=val1, named2=val2):
-
-    func(a, named2=b, named1=c)
         pass
 
--   After the positional args, named args are allowed
+    func(a, named2=b, named1=c)
+
+-   After the regular args, default args are allowed
 -   `val1` and `val2` are default values for those variables.
 -   Omitting named arguments in a call uses the default value
--   Named arguments can be given out of order:
-    - `func(a, named2=b)`
-    - The default value, val1 will be bound to named1
 
 --
-
-#### Default Arguments
+##### Extra
+### Default Arguments gotcha
 
 -   Default arguments are evaluated when the function is defined
 -   In all calls, the object that the expression evaluated to will be used.
@@ -54,10 +64,9 @@
         def func(a=None):
             a = a or []
 
-
 --
-
-#### Memoization
+##### Extra
+### Memoization
 
 -   Memoization is an optimization technique that stores results of
 function calls
@@ -76,52 +85,79 @@ function calls
 
 ### *args
 
--   A variable number of positional arguments can be specified
--   Could use any identifier but args is conventional
--   `args` is a tuple of 0 or more objects
+     def func(arg1, *args):
+        print(args)
+     func(1, 2, 3, 4)
 
+     # output:
+    (2, 3, 4)
+
+-   A variable number of positional arguments can be specified
+-   Could use any identifier but `args` is conventional
+-   `args` is a tuple of 0 or more objects
 
 --
 ### **kwargs
 
-    def func(arg1, *args, **kwargs):
-        pass
+    def foo(arg1, **kwargs):
+        print(kwargs)
+
+    foo(1,two=2, three=3)
+
+    # output
+    {'two': 2, 'three': 3}
 
 -   Use `**kwargs` at the end
--   Could use any identifier but kwargs is conventional
+-   Could use any identifier but `kwargs` is conventional
 -   kwargs is a dictionary of strings to values
 -   The keys of kwargs are the names of the keyword args
 
 --
-### \*/\*\* in Function Definition or Assignment
+##### Extra
+### iterator expension
+    a, *the_rest = range(4)
+    print(the_rest)
 
--   `def(*args)`: args is a tuple that can take 0 or more values
--   `def(**kwargs)`: kwargs is a dictionary that can take 0 or more
-key-value pairs
+    # output
+    (1, 2, 3)
+
+
+-   Only works on Python3
 -   `a,*var_name = range(5)`: `var_name` is list taking 0 or more
 values
 
-
 --
 
-### \*/\*\* in Function Call
+### `*` in Function Call
 
--   `func(*expr)`
-    - `expr` is an iterable
-    - It gets unpacked as the positional arguments of `func`
-    - Equivalently:
-    ``` python
-    seq = list(expr)
-    func(seq[0], seq[1], ...)
-    ```
+    def bar(arg1, arg2, arg3):
+        print(arg1+arg2+arg3)
+
+    l = [1, 2, 3]
+    bar(*l)
+
+    # output
+    6
+
+- `l` is an iterable
+- It gets unpacked as the positional arguments of `bar`
+
 --
--   `func(**expr)`
-    - expr is a dictionary of form `{'string': val, ...}`
-    - It gets unpacked as the keyword arguments of `func`
-    - Equivalently
-    ```python
-    func(string=val, ...)
-    ```
+### `**` in Function Call
+
+    def print_person(name, age):
+        print('{} is {} years old'.format(name, age))
+
+    person = {'name': 'Mike', 'age': 28}
+    print_person(**person)
+
+    # output
+    Mike is 28 years old
+
+
+- `person` must be a dictionary of form `{'string': val, ...}`
+- It gets unpacked as the keyword arguments of `print_person`
+
 
 --
 ##### Extra
@@ -151,7 +187,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
-# Global variables
+# Closures, Global and Non-Local
 <!-- .slide: data-background="img/global.jpeg" -->
 
 --
@@ -162,6 +198,17 @@ def func(name: str, hight: float = 1.90)-> int:
         fruits = ['bannana', 'apple']
         def show():
             print(fruits)
+
+        return show
+
+    fruit_list = list_fruits()
+    fruit_list()
+
+    # output:
+    ['bannana', 'apple']
+
+
+--
 
 -   A function that knows about variable defined outside it's scope.
 -   `show()` is a closure because it knows about `fruits`
@@ -177,7 +224,7 @@ def func(name: str, hight: float = 1.90)-> int:
         global a
         a += 1
 
--   Changing global state can be dengerous, so Python requires you to declare it explictly
+-   Changing global state can be dangerous, so Python requires you to declare it explicitly
 -   `global` can circumvent read-only closures
 -   the `global` keyword declares certain variables in the current code block to reference the global scope
 -   Variables following global do not need to be bound already
@@ -185,22 +232,23 @@ def func(name: str, hight: float = 1.90)-> int:
 --
 
 ### Nonlocal
-```python
-def outer():
-    a = 42
-    def func():
-        nonlocal a
-        print(a)
-        a += 1
-    func()
-```
 
+    def outer():
+        a = 42
+        def func():
+            nonlocal a
+            print(a)
+            a += 1
+        func()
+
+-   Python3 only.
 -   `nonlocal` declares certain variables in the current code block to reference the nearest enclosing scope.
 -   If the nearest scope is the global scope then nonlocal raises a `SyntaxError`
 -   See [PEP 3104](https://www.python.org/dev/peps/pep-3104/)
 
 
 ---
+
 #Functional Programming
 <!-- .slide: data-background="img/lambda.jpg" -->
 --
@@ -234,9 +282,9 @@ def outer():
 --
 
 ### &lambda; (lambda) Functions
-```python
-f = lambda x: x + 1
-```
+
+    f = lambda x: x + 1
+
 -   Anonymous functions are function objects without a name
 -   lambdas can have the same arguments as regular functions:
 `lambda arg, *args, named=val, **kwargs: ret`
@@ -265,19 +313,18 @@ f = lambda x: x + 1
 --
 
 ### Partial Application
-```python
-from functools import partial
-def add(x, y):
-    return x + y
 
-add_3 = partial(add, 3)
-```
+    from functools import partial
+    def add(x, y):
+        return x + y
+
+    add_3 = partial(add, 3)
 
 -   Partial application creates a new function by supplying an existing function with some of its arguments
 
 ---
 
-#decorators
+# Decorators
 <!-- .slide: data-background="img/decorators.jpg" -->
 
 --
@@ -286,18 +333,17 @@ add_3 = partial(add, 3)
 
 -   Decorators are transformations on functions
 -   A function that takes in a function and returns a modified function
-```python
-@dec
-def func(arg1, arg2, ...):
-    pass
-```
+
+        @dec
+        def func(arg1, arg2, ...):
+            pass
+
 -   Is equivalent to:
 
-```python
-def func(arg1, arg2, ...):
-    pass
-func = dec(func)
-```
+        def func(arg1, arg2, ...):
+            pass
+        func = dec(func)
+
 
 --
 
@@ -305,48 +351,45 @@ func = dec(func)
 
 -   A decorator can take arguments
 
-```python
-@decmaker(argA, argB, ...)
-def func(arg1, arg2, ...):
-    pass
-```
+        @decmaker(argA, argB, ...)
+        def func(arg1, arg2, ...):
+            pass
+
 -   Is equivalent to:
 
-```python
-def func(arg1, arg2, ...):
-    pass
-func = decmaker(argA, argB, ...)(func)
-```
+        def func(arg1, arg2, ...):
+            pass
+        func = decmaker(argA, argB, ...)(func)
+
 --
 ### Deorator example
-```python
-import urllib
-from functools import lru_cache
 
-@lru_cache(maxsize=32)
-def get_pep(num):
-    'Retrieve text of a Python Enhancement Proposal'
-    resource = 'http://www.python.org/dev/peps/pep-{:04d}'.format(num)
-    try:
-        with urllib.request.urlopen(resource) as s:
-            return s.read()
-    except urllib.error.HTTPError:
-        return 'Not Found'
-```
+    import urllib
+    from functools import lru_cache
+
+    @lru_cache(maxsize=32)
+    def get_pep(num):
+        'Retrieve text of a Python Enhancement Proposal'
+        resource = 'http://www.python.org/dev/peps/pep-{:04d}'.format(num)
+        try:
+            with urllib.request.urlopen(resource) as s:
+                return s.read()
+        except urllib.error.HTTPError:
+            return 'Not Found'
+
 --
 
 ### Multiple Decorators
-```python
-@dec1
-@dec2
-def func(arg1, arg2, ...):
-    pass
-```
+
+    @dec1
+    @dec2
+    def func(arg1, arg2, ...):
+        pass
+
 
 -   Is equivalent to:
 
-```python
-def func(arg1, arg2, ...):
-    pass
-func = dec1(dec2(func))
-```
+        def func(arg1, arg2, ...):
+            pass
+        func = dec1(dec2(func))
+
