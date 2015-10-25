@@ -13,3 +13,37 @@ Screen will show:
     hi
     noam
 
+
+--
+-   First, let's get a little familiar with the `datetime` package
+
+        import datetime
+
+        ww1_end = datetime.date(1918, 11, 11)
+        ww2_start = datetime.date(1939, 9, 1)
+        europe_at_peace = ww2_start - ww1_end
+
+        print('{} days of peace'.format(europe_at_peace.days))
+
+        # output
+        7599 days of peace
+
+
+--
+
+### Integers
+
+* What do you get when you run this:
+
+        >>> 10 / 3
+
+--
+
+### Floats
+
+-   Float values always include a decimal mark:
+
+        >>> 10.0 / 4.0
+        2.5
+
+-   What happens when you divide an int by a float, a float by an int?

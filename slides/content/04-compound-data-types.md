@@ -59,6 +59,17 @@
 
     'hello ' * 3  # -> 'hello hello hello '
 
+--
+###### Exercise
+###  Rotate a word
+
+See http://lms.10x.org.il/item/30/
+
+--
+###### Exercise
+### Nachmanize
+
+See http://lms.10x.org.il/item/26/
 ---
 
 # Lists
@@ -260,7 +271,7 @@ Keep in mind this is a SHALLOW copy of l:
 (`copy.deepcopy` should be used to create a deep copy of lists)
 
 --
-###### Exercise #1
+###### Exercise
 ### Calculate Median
 
 See http://lms.10x.org.il/item/101/
@@ -301,11 +312,12 @@ See http://lms.10x.org.il/item/101/
 
 ### Powerful assigments
 
-    def f():
-        x, y = 'hi', 'man'
-        x, y = y, x # Awsome!
-        return x,y
+    x, y = 'hi', 'man'
+    x, y = y, x
+    print(x, y)
 
+    # output
+    man hi
 ---
 
 # Dictionary
@@ -335,7 +347,7 @@ See http://lms.10x.org.il/item/101/
 - Replace long `if x = a: elif x = b: elif...` with a dictionary lookup
 
 --
-###### Exercise #2
+###### Exercise
 ### Letter Counter
 
 See http://lms.10x.org.il/item/37/
@@ -365,26 +377,15 @@ See http://lms.10x.org.il/item/37/
 - `s.update(s2)` or `s = s | s2`: updates s with s2 values
 
 --
-###### Exercise #3
+###### Exercise
 ### Sets vs Lists
 
 See http://lms.10x.org.il/item/90/
 
 ---
 
-# More On Sequences
+# Comprehensions!
 <!-- .slide: data-background="img/sequences.jpg" -->
-
---
-## Builtins
-- `len(x)`: gives the number of elements
-- `sum(x)`: adds up elements
-- `a in x`: checks presence
-- `all(x)/any(x)`: return True is any/all in lst are True
-- `max(x)/min(x)`: biggest/smallest element
-- `reversed(x)`: iterator of elements in reverse order (doesn't work for sets, why?)
-- `zip(x,x)`: list of tuples with one element from each list
-- `sorted(x)`: returns new sorted list
 
 --
 ### List Comprehensions
@@ -455,8 +456,26 @@ type(tup)
 ```
 - We'll cover generators later
 
+---
+
+# Itearators Builtins
+
 --
-###### Exercise #4
+
+- `len(x)`: gives the number of elements
+- `sum(x)`: adds up elements
+- `a in x`: checks presence
+- `all(x)/any(x)`: return True is any/all in lst are True
+
+--
+
+- `max(x)/min(x)`: biggest/smallest element
+- `reversed(x)`: iterator of elements in reverse order (doesn't work for sets, why?)
+- `zip(x,x)`: list of tuples with one element from each list
+- `sorted(x)`: returns new sorted list
+
+--
+###### Exercise
 ### Funny Reverse
 
 See http://lms.10x.org.il/item/41/

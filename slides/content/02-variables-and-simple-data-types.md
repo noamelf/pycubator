@@ -1,5 +1,5 @@
 <!-- .slide: data-background="img/puzzles.jpg" -->
-# Variables and data types
+# Variables and simple data types
 
 ### Pycubator
 
@@ -38,7 +38,17 @@ You can modify the values in any variable by reassigning the value:
     5.5
 
 --
+### Augmented assignment
 
+    >>> a = 50
+    >>> a += 10
+    >>> a
+    60
+
+-   This is the same as writing: `a = a + 10`
+-   Try: `-=`, `*=`, `/=`, `//=`, `%=` and `**=`.
+
+--
 ### Naming convention
 
 According to Python conventions, variable names should be lowercase with words separated by underscores:
@@ -71,7 +81,7 @@ According to Python conventions, variable names should be lowercase with words s
         x = 1
 
 --
-
+##### Extra
 ###  Deleting names
 
 Variables ("names") can be deleted with del:
@@ -82,18 +92,6 @@ Variables ("names") can be deleted with del:
     >>> del x
     >>> x
     NameError: name 'x' is not defined
-
---
-
-### Augmented assignment
-
-    >>> a = 50
-    >>> a += 10
-    >>> a
-    60
-
--   This is the same as writing: `a = a + 10`
--   Try: `-=`, `*=`, `/=`, `//=`, `%=` and `**=`.
 
 --
 ### Comparisons
@@ -133,9 +131,12 @@ Variables ("names") can be deleted with del:
 Python boolean types literals are `True` and `False`.
 Let's run them through an "if" statement:
 
-    >>> if True: print('Sure is')
+    >>> if True:
+            print('Sure is')
     Sure is
-    >>> if False: print('You shouldn't see me')
+
+    >>> if False:
+            print('You shouldn't see me')
 
 
 --
@@ -159,7 +160,7 @@ Let's run them through an "if" statement:
 |`not x`    | if `x` is `False`, then `True`, else `False`
 
 --
-
+##### Extra
 ### Short circuit
 
 -   The tables before shows that in Python `and` and `or` are **short-circuit** operators:
@@ -175,7 +176,7 @@ Let's run them through an "if" statement:
 ---
 
 # Strings
-
+<!-- .slide: data-background="img/string.jpg" -->
 --
 ### Strings literals
 
@@ -325,10 +326,10 @@ All the methods bellow return new string (there is no in place operations!).
     # Bad style formatting
     print('hello ' + name)
 
-    # old style formatting
+    # Old style formatting
     print('Hello %s!' % name)
 
-    # new style formatting
+    # New style formatting
     print('Hello {}!'.format(name))
 
 --

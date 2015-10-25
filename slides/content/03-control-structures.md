@@ -4,7 +4,8 @@
 ### Pycubator
 
 --
-# Blocks
+### Blocks
+
 -   All control structures (if, while/for, functions) content must be in a block.
 -   Block are determined by indentation.
 -   The pep8 style guides set 4 spaces to be the standard indentation.
@@ -20,26 +21,28 @@
 --
 ### Simple if
 
-    x = input()
+    x = int(input())  # Remember python2 is uses raw_input()
     if x > 5:
         msg = 'Higher than five'
     elif x == 5:
         msg = 'Equels five'
     else:
         msg = 'Lower than five'
+    print(msg)
 
 --
 ### Trinary operator
 
-    x = input()
+    x = int(input())
     msg = 'Higher than five' if x > 5 else 'Equel or lower than five'
+    print(msg)
 
 --
 ### Simple while
 
     while True:
         print("Enter your name (or nothing to exit)")
-        name = input() # python2: raw_input()
+        name = input()
         if not name:
             print("Bye!")
             break
@@ -54,7 +57,7 @@
         password = input("Please enter your password: ")
         if not password:
             continue
-        if password == SECRET:
+        elif password == SECRET:
             break
 
         print "Wrong password!"
@@ -81,6 +84,7 @@ See http://lms.10x.org.il/item/13/
 --
 ### For on a string
 
+    # Make Python2 print compatibale with Python3
     from __future__ import print_function
 
     >>> for c in "Hello World!":
@@ -110,6 +114,14 @@ See http://lms.10x.org.il/item/13/
 *   `range(i, j, k)` produces `[i, i+k, ..., m]`
 
 --
+
+### Nested loops
+
+    for i in range(10):
+        for j in range(10):
+            print i, j
+
+--
 ### Enumarate
     >>> for i, c in enumerate("Hello World!"):
             print(i, c)
@@ -134,18 +146,6 @@ See http://lms.10x.org.il/item/15/
 
 ---
 
-# Nested loops
-
---
-### Nested loops
-
-    for i in range(10):
-        for j in range(10):
-            print i, j
-
-
----
-
 # Functions
 
 --
@@ -162,15 +162,4 @@ See http://lms.10x.org.il/item/15/
 *   All functions return a value (None if not specified)
 *   Parameter data types are not specified either
 
---
-###### Exercise #4
-###  Rotate a word
-
-See http://lms.10x.org.il/item/30/
-
---
-###### Exercise #5
-### Nachmanize
-
-See http://lms.10x.org.il/item/26/
 

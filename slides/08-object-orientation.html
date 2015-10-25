@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Variables and data types|Pycubator</title>
+    <title>Object Orientation|Pycubator</title>
 
     <meta name="author" content="Noam Elfanbaum">
 
@@ -40,7 +40,7 @@
 
 <div class="reveal">
     <div class="slides">
-        <section data-markdown="content/02-variables-and-data-types.md" data-separator="^---" data-separator-vertical="^--"
+        <section data-markdown="content/08-object-orientation.md" data-separator="^---" data-separator-vertical="^--"
                  data-separator-notes="^Note:" data-charset="iso-8859-15">
         </section>
     </div>
@@ -80,6 +80,8 @@
             },
             callback: function () {
                 hljs.initHighlightingOnLoad();
+                // A hack to make highlightjs only highlight Python
+                hljs.configure({languages: ['python']})
             }
         }, {
             src: 'revealjs/plugin/zoom-js/zoom.js',

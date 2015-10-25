@@ -80,6 +80,8 @@
             },
             callback: function () {
                 hljs.initHighlightingOnLoad();
+                // A hack to make highlightjs only highlight Python
+                hljs.configure({languages: ['python']})
             }
         }, {
             src: 'revealjs/plugin/zoom-js/zoom.js',

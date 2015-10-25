@@ -97,6 +97,17 @@ function calls
 -   `args` is a tuple of 0 or more objects
 
 --
+###### Exercise
+
+-   Implement the `list_students` function
+
+        expected_result = '''0 Tim
+        1 Tom
+        2 Tal'''
+        assert expected_result == list_students('tal', 'tom', 'tim')
+
+
+--
 ### **kwargs
 
     def foo(arg1, **kwargs):
@@ -111,6 +122,19 @@ function calls
 -   Could use any identifier but `kwargs` is conventional
 -   kwargs is a dictionary of strings to values
 -   The keys of kwargs are the names of the keyword args
+
+--
+###### exercise
+
+-   implement the `inventory_str` function
+
+        expected_result = '''The following Toyota models are availble:
+        Corola - 7
+        Auris - 5
+        Camary - 10'''
+
+        result = inventory_str('toyota', camary=10, auris=5, corola=7)
+        assert  result == expected_result
 
 --
 ##### Extra
@@ -187,6 +211,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
+##### Extra
 # Closures, Global and Non-Local
 <!-- .slide: data-background="img/global.jpeg" -->
 
@@ -249,6 +274,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
+##### Extra
 #Functional Programming
 <!-- .slide: data-background="img/lambda.jpg" -->
 --
@@ -324,6 +350,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
+##### Extra
 # Decorators
 <!-- .slide: data-background="img/decorators.jpg" -->
 

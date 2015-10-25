@@ -41,11 +41,6 @@
 
     print('Hello World!')
 
-
----
-
-# Philosophy
-
 --
 
 ### The Zen of Python:
@@ -88,6 +83,24 @@
 * Get information with `help()`
 * But... does'nt play nice with multiline code (i.e. classes, functions)
 
+--
+
+### Python as a calculator
+
+*   Try running this in your python shell:
+
+        >>> 10 + 10
+        20
+        >>> 50 * 2
+        100
+        >>> 10 + 20 * 3
+        70
+        >>> (10 + 20) * 3
+        90
+
+* What does `**` do?
+* What does `%` do?
+
 ---
 
 # IPython
@@ -111,9 +124,7 @@
 
 # .py files
 
-
 --
-### .py files
 
 * Python source files
 * (No compilation needed)
@@ -127,8 +138,13 @@
     $ python /tmp/example.py
     hello world!
 
+---
+
+# IDE
+
 --
-### IDE - PyCharm
+
+### PyCharm
 
 -   [PyCharm's website](https://www.jetbrains.com/pycharm/)
 -   You can set up both python 2 and python 3 side by side.
@@ -145,47 +161,6 @@
 
 ---
 
-# Let's play!
-
-
---
-
-### Python as a calculator
-
-*   Try running this in your python shell:
-
-        >>> 10 + 10
-        20
-        >>> 50 * 2
-        100
-        >>> 10 + 20 * 3
-        70
-        >>> (10 + 20) * 3
-        90
-
-* What does `**` do?
-* What does `%` do?
-
---
-
-### Integers
-
-* What do you get when you run this:
-
-        >>> 10 / 3
-
---
-
-### Floats
-
--   Float values always include a decimal mark:
-
-        >>> 10.0 / 4.0
-        2.5
-
--   What happens when you divide an int by a float, a float by an int?
-
----
 ##### Extra
 # Some more theory
 
