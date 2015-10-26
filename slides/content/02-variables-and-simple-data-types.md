@@ -282,27 +282,6 @@ All the methods bellow return new string (there is no in place operations!).
 
         'hello world'.replace('world', 'john')  # -> 'hello john'
 
---
-
-*   split, rsplit (what does rsplit do?)
-
-        'hello world'.split()  # -> ['hello', 'world']
-
-        'hello, and ,welcome'.split(',', maxsplit=1) # -> ['hello', ' and ,welcome']
-
-*   splitlines - splits and leaves the `\n` out
-
-        '''hi
-        man'''.splitlines() # -> ['hi', 'man']
-
---
-
-*   join
-
-        ' '.join(['hello', 'world'])  # -> 'hello world'
-
-        '<br >'.join(['first line', 'second line'])  # -> 'first line<br >second line'
-
 *   strip, rstrip, lstrip - removes spaces and new lines from the ends of a string:
 
         '     hello!    \n'.strip() # -> 'hello!'

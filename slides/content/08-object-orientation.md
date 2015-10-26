@@ -41,13 +41,17 @@
 -   Instance method definitions must use self as the first argument
 
 --
-## Private attributes
+### Private by convention
 
-- `_`
-    - A leading `_` means use at your own risk
-    - `from mod import *` will not import names with a leading _
+-   A leading `_` means use at your own risk
+-   "We're all adults here": you can still access any variable that you want
 
--   We're all adults here: you can still access any variable that you want
+        class Circle:
+            _pi = 3.14
+            ...
+
+            def get_perimter(self, a, b):
+                return 2 * self._pi * self.r
 
 --
 ###### Exercise

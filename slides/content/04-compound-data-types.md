@@ -60,6 +60,24 @@
     'hello ' * 3  # -> 'hello hello hello '
 
 --
+### Spliting, joining and lists
+*   Splitting a string according to a value
+
+        'hello world'.split()  # -> ['hello', 'world']
+
+        'hello, and ,welcome'.split(',', maxsplit=1) # -> ['hello', ' and ,welcome']
+
+* `['hello', 'world']` is a list data type. We'll very soon find out more about that!
+
+--
+
+*   Joining list values using a specific string separator
+
+        ' '.join(['hello', 'world'])  # -> 'hello world'
+
+        ','.join(['first line', 'second line'])  # -> 'first line,second line'
+
+--
 ###### Exercise
 ###  Rotate a word
 
