@@ -81,7 +81,7 @@ According to Python conventions, variable names should be lowercase with words s
         x = 1
 
 --
-##### Extra
+##### advanced
 ###  Deleting names
 
 Variables ("names") can be deleted with del:
@@ -160,7 +160,7 @@ Let's run them through an "if" statement:
 |`not x`    | if `x` is `False`, then `True`, else `False`
 
 --
-##### Extra
+##### advanced
 ### Short circuit
 
 -   The tables before shows that in Python `and` and `or` are **short-circuit** operators:
@@ -227,7 +227,7 @@ Notable escape sequences in string literals:
 [lex]: http://docs.python.org/2/reference/lexical_analysis.html#string-literals
 
 --
-##### Extra
+##### advanced
 ### Raw string literals
 
 To disable escape sequences, raw string literals can be used:

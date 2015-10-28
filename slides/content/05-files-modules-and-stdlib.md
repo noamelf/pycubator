@@ -132,7 +132,7 @@ See http://lms.10x.org.il/item/35/
         print greeting()
 
 --
-##### Extra
+##### advanced
 ### Modules are singeltones
 
     # stuff.py

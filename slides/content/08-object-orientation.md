@@ -83,7 +83,7 @@ http://lms.10x.org.il/item/116/
 
 --
 
-##### Extra
+##### advanced
 ## Multiple inheritance
 
     class Circle(Shape, Drawable):
@@ -96,7 +96,7 @@ http://lms.10x.org.il/item/116/
 
 ---
 
-##### Extra
+##### advanced
 # Python Magic! (methods)
 <!-- .slide: data-background="img/magic_mist.jpg" -->
 
@@ -153,7 +153,7 @@ http://lms.10x.org.il/item/116/
 
 ---
 
-##### Extra
+##### advanced
 # Advanced topics
 
 --

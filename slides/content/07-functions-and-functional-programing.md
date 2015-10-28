@@ -52,7 +52,7 @@
 -   Omitting named arguments in a call uses the default value
 
 --
-##### Extra
+##### advanced
 ### Default Arguments gotcha
 
 -   Default arguments are evaluated when the function is defined
@@ -65,7 +65,7 @@
             a = a or []
 
 --
-##### Extra
+##### advanced
 ### Memoization
 
 -   Memoization is an optimization technique that stores results of
@@ -137,7 +137,7 @@ function calls
         assert  result == expected_result
 
 --
-##### Extra
+##### advanced
 ### iterator expension
     a, *the_rest = range(4)
     print(the_rest)
@@ -184,7 +184,7 @@ values
 
 
 --
-##### Extra
+##### advanced
 ### Required Keyword Args
 
 -   Python3 only
@@ -199,7 +199,7 @@ values
 
 
 --
-##### Extra
+##### advanced
 ### Annotations
 ```python
 def func(name: str, hight: float = 1.90)-> int:
@@ -211,7 +211,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
-##### Extra
+##### advanced
 # Closures, Global and Non-Local
 <!-- .slide: data-background="img/global.jpeg" -->
 
@@ -274,7 +274,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
-##### Extra
+##### advanced
 #Functional Programming
 <!-- .slide: data-background="img/lambda.jpg" -->
 --
@@ -350,7 +350,7 @@ def func(name: str, hight: float = 1.90)-> int:
 
 ---
 
-##### Extra
+##### advanced
 # Decorators
 <!-- .slide: data-background="img/decorators.jpg" -->
 

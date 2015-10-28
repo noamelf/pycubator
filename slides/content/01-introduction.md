@@ -161,7 +161,7 @@
 
 ---
 
-##### Extra
+##### advanced
 # Some more theory
 
 
