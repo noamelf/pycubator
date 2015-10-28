@@ -164,9 +164,12 @@ See http://lms.10x.org.il/item/35/
 
 # The Standard Library
 
+---
+
+# Time
+
 --
 
-### Time
 -   `time.time` return the time in seconds since the epoch as a floating point number.
 
         import time
@@ -192,8 +195,11 @@ See http://lms.10x.org.il/item/35/
         Processing, please wait, ...
         Done.
 
---
+---
 
+# Logging
+
+--
 ### Logging
 
 -   In large and long running programs we need more sophisticated printing.
@@ -254,10 +260,12 @@ See http://lms.10x.org.il/item/35/
     -   [Logging howto](https://docs.python.org/3.5/howto/logging.html)
     -   [Become a Logging Expert in 30 Minutes](https://youtu.be/24_4WWkSmNo), Gavin M. Roy, PyCon 2013
 
+---
+
+# OS
+
 --
-
 ### OS
-
 -   `os.listdir` return a list containing the names of the entries in the directory given by path:
 
         import os
@@ -307,8 +315,11 @@ See http://lms.10x.org.il/item/35/
         # output
         False
 
---
+---
 
+# Sys and argparse
+
+--
 ### Sys
 - `sys.argv[0]` contains file name
 - `sys.argv[1:]` contains arguments (if any)
@@ -342,7 +353,7 @@ See http://lms.10x.org.il/item/35/
 -   learn more at [argparse tutorial](https://docs.python.org/3/howto/argparse.html)
 --
 
-## argparse example
+### argparse example
 -   test.py:
 
         import argparse
@@ -358,10 +369,102 @@ See http://lms.10x.org.il/item/35/
         $ python3 test.py 4
         16
 
-
 --
 
 ###### Exercise #3
 ### File Information by Extension
 
 See http://lms.10x.org.il/item/91/
+
+---
+
+# Subprocess
+
+--
+
+The subprocess module provides a consistent interface to creating and working with additional
+processes.
+
+--
+### Simple call
+-   To run an external command without interacting with it, use the `call()` function.
+
+        import subprocess
+
+        subprocess.call(['ls', '-1'], shell=True)
+
+--
+
+-   The return value from `call()` is the exit code of the program.
+-   The caller is responsible for interpreting it to detect errors.
+
+--
+### Error handeling
+
+-   The `check_call()` function works like `call()` except that the exit code is checked,
+    and if it indicates an error happened then a `CalledProcessError` exception is raised.
+
+        import subprocess
+
+        subprocess.check_call(['false'])
+
+--
+### Capturing Output
+-   The standard input and output channels for the process started by `call()` are bound to
+    the parent’s input and output.
+-   Use `check_output()` to capture the output for later processing.
+
+        import subprocess
+
+        output = subprocess.check_output(['ls', '-1'])
+        print('Have {} bytes in output'.format(len(output)))
+        print(output)
+
+---
+
+# Threading
+
+--
+
+-   The simplest way to use a Thread is to instantiate it with a target function and call `start()`
+    to let it begin working.
+
+        import threading
+
+        def worker(num):
+            """thread worker function"""
+            print('Worker: {}'.format(num))
+            return
+
+        for i in range(5):
+            t = threading.Thread(target=worker, args=(i,))
+            t.start()
+
+--
+
+-   Many time we run threads and wish that the main process will collect their result, to do so
+    we use the `join` method
+
+        import threading, random, time
+
+        def worker(num, sleep):
+            print('Worker #{} starts to sleep {} seconds '.format(num, sleep))
+            time.sleep(sleep)
+            print('Worker #{} woke up '.format(num))
+            return
+
+        threads = []
+        for i in range(5):
+            sleep_time = random.randint(1,5)
+            t = threading.Thread(target=worker, args=(i, sleep_time,))
+            threads.append(t)
+            t.start()
+
+        for t in threads:
+            t.join()
+
+---
+
+### Reference
+-   [pymotw](https://pymotw.com/2/) - Python module of the week
+-   Standard Library [documentation](https://docs.python.org/3/library)

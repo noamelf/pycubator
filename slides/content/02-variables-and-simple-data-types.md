@@ -286,6 +286,14 @@ All the methods bellow return new string (there is no in place operations!).
 
         '     hello!    \n'.strip() # -> 'hello!'
 
+--
+### `+` and `*`
+
+    'hello ' + 'world'  # -> 'hello world'
+
+    'hello ' * 3  # -> 'hello hello hello '
+
+--
 ---
 
 # Interactive Input and string formatting
@@ -331,6 +339,6 @@ All the methods bellow return new string (there is no in place operations!).
 
 
 --
-###### Exercise #2
-
+###### Exercise
+### Format string
 See string formatting at (part 1&2): http://lms.10x.org.il/item/123/

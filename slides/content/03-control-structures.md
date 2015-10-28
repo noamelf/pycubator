@@ -41,38 +41,34 @@
 ### Simple while
 
     while True:
-        print("Enter your name (or nothing to exit)")
-        name = input()
-        if not name:
-            print("Bye!")
-            break
-        print("Hello {}!".format(name))
+        name = input('Enter your name (or nothing to exit): ')
+        print('Hello {}!'.format(name))
 
 --
 ### Break and continue:
 
-    SECRET = "xyzzy"
+    SECRET = 'xyzzy'
 
     while True:
-        password = input("Please enter your password: ")
+        password = input('Please enter your password: ')
         if not password:
             continue
         elif password == SECRET:
             break
 
-        print "Wrong password!"
+        print('Wrong password!')
 
 
-    print "Welcome!"
+    print 'Welcome!'
 
 --
-###### Exercise #1
+###### Exercise
 ### Simple calc
 
 See http://lms.10x.org.il/item/12/
 
 --
-###### Exersice #2
+###### Exersice
 ### Guessing game
 
 See http://lms.10x.org.il/item/13/
@@ -87,7 +83,7 @@ See http://lms.10x.org.il/item/13/
     # Make Python2 print compatibale with Python3
     from __future__ import print_function
 
-    >>> for c in "Hello World!":
+    >>> for c in 'Hello World!':
             print(c, end=' ')
     H e l l o   W o r l d !
 
@@ -123,7 +119,7 @@ See http://lms.10x.org.il/item/13/
 
 --
 ### Enumarate
-    >>> for i, c in enumerate("Hello World!"):
+    >>> for i, c in enumerate('Hello World!'):
             print(i, c)
     0 H
     1 e

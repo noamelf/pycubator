@@ -53,13 +53,7 @@
     s[::-1]  # -> 'dlrow olleh'
 
 --
-### + and *
 
-    'hello ' + 'world'  # -> 'hello world'
-
-    'hello ' * 3  # -> 'hello hello hello '
-
---
 ### Spliting, joining and lists
 *   Splitting a string according to a value
 
