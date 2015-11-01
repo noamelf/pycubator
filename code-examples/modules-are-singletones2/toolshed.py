@@ -9,6 +9,7 @@ tools = {
 def check_tool_exist(tool):
     have_tool = tools.get(tool)
     if not have_tool:
-        logging.error('There are no {}'.format(tool))
-        raise RuntimeError()
+        logging.error('There is no {}'.format(tool))
+        return 0
 
+    return have_tool
