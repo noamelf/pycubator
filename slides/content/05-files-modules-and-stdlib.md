@@ -104,8 +104,10 @@ See http://lms.10x.org.il/item/35/
 ### Packages
 
 -   Packages are namespaces which contain multiple packages and modules themselves.
--   Packages are simply directories, but in python2 there is a twist: each package/directory
+-   Packages are simply directories, but there is a twist: each package/directory
     MUST contain a special file called `__init__.py`
+-   Not putting an `__init__.py` file in a Python3 package will work but that's
+    [another story](https://www.python.org/dev/peps/pep-0420/)
 
 --
 
