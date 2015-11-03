@@ -50,7 +50,7 @@
             _pi = 3.14
             ...
 
-            def get_perimter(self, a, b):
+            def get_perimter(self):
                 return 2 * self._pi * self.r
 
 --
