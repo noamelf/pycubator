@@ -21,8 +21,6 @@
 -   When calling `func` exactly 3 arguments must be given, wrong number of args will
     result in a `TypeError`
 -   The order in the call determines which arg they are bound to
--   The expressions (`a, b, c`) are evaluated before the call
--   The value of `a` is bound to `arg1` in the body of func and so forth
 
 --
 ### Named Arguments
@@ -98,12 +96,14 @@ function calls
 
 --
 ###### Exercise
+### List students
 
 -   Implement the `list_students` function
 
         expected_result = '''0 Tim
         1 Tom
         2 Tal'''
+
         assert expected_result == list_students('tal', 'tom', 'tim')
 
 
@@ -139,6 +139,7 @@ function calls
 --
 ##### advanced
 ### iterator expension
+
     a, *the_rest = range(4)
     print(the_rest)
 
@@ -147,8 +148,7 @@ function calls
 
 
 -   Only works on Python3
--   `a,*var_name = range(5)`: `var_name` is list taking 0 or more
-values
+-   `a,*var_name = range(5)`: `var_name` is list taking 0 or more values
 
 --
 
@@ -201,10 +201,10 @@ values
 --
 ##### advanced
 ### Annotations
-```python
-def func(name: str, hight: float = 1.90)-> int:
-    pass
-```
+
+    def func(name: str, hight: float = 1.90)-> int:
+        pass
+
 -   Function arguments and return values can be annotated
 -   Python does not enforce any meaning to annotations
 -   Read further on [PEP 3107](https://www.python.org/dev/peps/pep-3107/) and [PEP 484](https://www.python.org/dev/peps/pep-0484/)
@@ -315,7 +315,7 @@ def func(name: str, hight: float = 1.90)-> int:
 -   lambdas can have the same arguments as regular functions:
 `lambda arg, *args, named=val, **kwargs: ret`
 -   lambdas must be one-liners and do not support annotations
--   'syntatic suger' to pass short functions to other functions.
+-   'syntactic sugar' to pass short functions to other functions.
 
 --
 
