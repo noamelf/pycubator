@@ -146,8 +146,10 @@ Source: [Michael Feathers' blog](http://www.artima.com/weblogs/viewpost.jsp?thre
 
         OK
 
---
+---
+# Resorces and exercise
 
+--
 ### Resources
 -   Ray Toal, [unittest in 5 minutes](http://www.slideshare.net/raytoal/unittest-in-5-minutes)
 -   Python stdlib [documentation](https://docs.python.org/3/library/unittest.html#module-unittest)
