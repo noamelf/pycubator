@@ -1,8 +1,17 @@
-import utensils
+# import utensils
+#
+# print(utensils.eat_soup())
 
-print(utensils.eat_soup())
 
+# from utensils import eat_soup as es
+#
+#
+# def eat_soup():
+#     return 'fork'
 
-from utensils import eat_soup
+a = 1
 
-print(eat_soup())
+from utensils import *
+
+print(a)
+
