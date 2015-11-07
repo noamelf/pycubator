@@ -147,7 +147,7 @@ Source: [Michael Feathers' blog](http://www.artima.com/weblogs/viewpost.jsp?thre
         OK
 
 ---
-# Resorces and exercise
+# Resources and exercise
 
 --
 ### Resources
