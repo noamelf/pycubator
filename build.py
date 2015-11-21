@@ -55,9 +55,10 @@ def generate_exercises():
     exporter = HTMLExporter()
 
     for exercise in p.iterdir():
-        html, _ = exporter.from_file(exercise.open())
-        with open(exercise.with_suffix('.html').name, 'w') as f:
-            f.write(html)
+        if exercise.suffix == '.ipynb':
+            html, _ = exporter.from_file(exercise.open())
+            with open(exercise.with_suffix('.html').name, 'w') as f:
+                f.write(html)
 
 
 def main():
