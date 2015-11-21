@@ -1,6 +1,6 @@
 # pycubator
 
-[live slides][slides]
+[live slides](http://noamelf.github.io/pycubator)
 
 Pycubator is a collection of classes for a 3 day Python training based on MD and revealjs.
 These slides are meant to be used in a teacher-led classroom, but put a strong emphasis on student
@@ -15,5 +15,3 @@ These slides are built upon our experience as Python instructors. *Work in progr
 ## Contributors
 * [Udi Oron](https://twitter.com/nonZero)
 * [Noam Elfanbaum](https://twitter.com/noamelf)
-
-[slides]:http://noamelf.github.io/pycubator/slides/
