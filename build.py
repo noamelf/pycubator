@@ -2,8 +2,16 @@ from pathlib import Path
 import sys
 
 from jinja2 import Environment, FileSystemLoader
+from nbconvert.exporters import HTMLExporter
 
-get_tmpl = Environment(loader=FileSystemLoader('templates/')).get_template
+templates = None
+
+
+def get_tmpl(name):
+    global templates
+    if not templates:
+        templates = Environment(loader=FileSystemLoader('templates/'))
+    return templates.get_template(name)
 
 
 def extract_slide_title(md_file):
@@ -26,21 +34,40 @@ def pre_clean():
         i.unlink()
 
 
-def main():
-    pre_clean()
-
-    slide_tmpl, index_tmpl = get_tmpl('slide.j2'), get_tmpl('index.j2')
-
-    md_files = list(get_md_files())
-
+def generate_slides(md_files):
+    slide_tmpl = get_tmpl('slide.j2')
     for md_file, html_file, title in md_files:
         rendered_template = slide_tmpl.render(mdfile=md_file, title=title)
 
         with open(html_file, 'w') as f:
             f.write(rendered_template)
 
+
+def generate_index(md_files):
+    index_tmpl = get_tmpl('index.j2')
+
     with open('index.html', 'w') as f:
         f.write(index_tmpl.render(slides=md_files))
+
+
+def generate_exercises():
+    p = Path('content', 'exercises')
+    exporter = HTMLExporter()
+
+    for exercise in p.iterdir():
+        html, _ = exporter.from_file(exercise.open())
+        with open(exercise.with_suffix('.html').name, 'w') as f:
+            f.write(html)
+
+
+def main():
+    pre_clean()
+
+    md_files = list(get_md_files())
+
+    generate_slides(md_files)
+    generate_index(md_files)
+    generate_exercises()
 
 
 if __name__ == '__main__':
