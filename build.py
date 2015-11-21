@@ -14,10 +14,10 @@ def extract_slide_title(md_file):
 
 
 def get_md_files():
-    p = Path('content')
+    p = Path('content', 'slides')
     for md_file in sorted(p.iterdir()):
         if md_file.suffix == '.md':
-            yield md_file, extract_slide_title(md_file)
+            yield str(md_file), md_file.with_suffix('.html').name, extract_slide_title(md_file)
 
 
 def pre_clean():
@@ -31,8 +31,7 @@ def main():
 
     slide_tmpl, index_tmpl = get_tmpl('slide.j2'), get_tmpl('index.j2')
 
-    md_files = [(str(md_file), md_file.with_suffix('.html').name, title)
-                for md_file, title in get_md_files()]
+    md_files = list(get_md_files())
 
     for md_file, html_file, title in md_files:
         rendered_template = slide_tmpl.render(mdfile=md_file, title=title)
