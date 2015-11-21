@@ -340,5 +340,5 @@ All the methods bellow return new string (there is no in place operations!).
 
 --
 ###### Exercise
-### Format string
-See string formatting at (part 1&2): http://lms.10x.org.il/item/123/
+[Sons and daughters](excercises/sons (string formating)
+
