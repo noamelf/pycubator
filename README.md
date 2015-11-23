@@ -1,6 +1,6 @@
 # Pycubator
 
-Live slides are at [pycubator.com](https://pycubator.com)
+Live slides are at [pycubator.com](http://pycubator.com)
 
 Pycubator is a collection of classes for a 3 day Python training based on MD and revealjs.
 These slides are meant to be used in a teacher-led classroom, but put a strong emphasis on student
