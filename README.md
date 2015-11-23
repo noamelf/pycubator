@@ -13,8 +13,9 @@ These slides are built upon our experience as Python instructors. *Work in progr
 -   Real world examples
 
 ## Contributors
-* [Udi Oron](https://twitter.com/nonZero)
 * [Noam Elfanbaum](https://twitter.com/noamelf)
+* [Udi Oron](https://twitter.com/nonZero)
+
 
 ---  
   
