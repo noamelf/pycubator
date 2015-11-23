@@ -2,11 +2,9 @@
 
 Live slides are at [pycubator.com](http://pycubator.com)
 
-Pycubator is a collection of classes for a 3 day Python training based on MD and revealjs.
-These slides are meant to be used in a teacher-led classroom, but put a strong emphasis on student
+Pycubator (Python incubator) is a collection of slides for teaching Python.
+These slides are meant to be used in a teacher-led classroom, but also, put a strong emphasis on student
 exploration and participation.
-
-These slides are built upon our experience as Python instructors. *Work in progress*.
 
 ## The zen of pycubator
 -   Talk less, practice more.
@@ -15,7 +13,6 @@ These slides are built upon our experience as Python instructors. *Work in progr
 ## Contributors
 * [Noam Elfanbaum](https://twitter.com/noamelf)
 * [Udi Oron](https://twitter.com/nonZero)
-
 
 ---  
   
