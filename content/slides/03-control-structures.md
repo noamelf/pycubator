@@ -62,16 +62,9 @@
     print 'Welcome!'
 
 --
-###### Exercise
-### Simple calc
+###### Exercises
 
-See http://lms.10x.org.il/item/12/
-
---
-###### Exersice
-### Guessing game
-
-See http://lms.10x.org.il/item/13/
+[while-and-input](while-and-input.html)
 
 ---
 
@@ -135,10 +128,8 @@ See http://lms.10x.org.il/item/13/
     11 !
 
 --
-###### Exercise #3
-### Simple Square
-
-See http://lms.10x.org.il/item/15/
+###### Exercises
+[for loops](for-loops.html)
 
 ---
 

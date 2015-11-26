@@ -72,16 +72,9 @@
         ','.join(['first line', 'second line'])  # -> 'first line,second line'
 
 --
-###### Exercise
-###  Rotate a word
+###### Exercises
+[Slicing Joining and More](slicing-joining-and-more.html)
 
-See http://lms.10x.org.il/item/30/
-
---
-###### Exercise
-### Nachmanize
-
-See http://lms.10x.org.il/item/26/
 ---
 
 # Lists
