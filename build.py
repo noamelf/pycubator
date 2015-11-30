@@ -5,7 +5,7 @@ import sys
 
 from jinja2 import Environment, FileSystemLoader
 from nbconvert.exporters import HTMLExporter
-
+from nbconvert.preprocessors import ClearOutputPreprocessor
 templates = None
 
 
@@ -55,6 +55,7 @@ def generate_index(md_files):
 def generate_exercises():
     p = Path('content', 'exercises')
     exporter = HTMLExporter()
+    exporter.register_preprocessor(ClearOutputPreprocessor(), enabled=True)
 
     for exercise in p.iterdir():
         if exercise.suffix == '.ipynb':

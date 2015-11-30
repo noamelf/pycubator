@@ -277,9 +277,8 @@ Keep in mind this is a SHALLOW copy of l:
 
 --
 ###### Exercise
-### Calculate Median
 
-See http://lms.10x.org.il/item/101/
+[Lists exercises](Lists.html)
 
 ---
 
@@ -352,10 +351,9 @@ See http://lms.10x.org.il/item/101/
 - Replace long `if x = a: elif x = b: elif...` with a dictionary lookup
 
 --
-###### Exercise
-### Letter Counter
+###### Exercises
 
-See http://lms.10x.org.il/item/37/
+[Dictionaries exercises](Dictionaries.html)
 
 
 ---
@@ -382,10 +380,9 @@ See http://lms.10x.org.il/item/37/
 - `s.update(s2)` or `s = s | s2`: updates s with s2 values
 
 --
-###### Exercise
-### Sets vs Lists
+##### Advance Exercise
 
-See http://lms.10x.org.il/item/90/
+[Sets vs. Lists](Sets-vs-Lists.html)
 
 ---
 
@@ -481,7 +478,5 @@ type(tup)
 
 --
 ###### Exercise
-### Funny Reverse
 
-See http://lms.10x.org.il/item/41/
-
+[Comprehensions exercises](Comprehensions.html)
