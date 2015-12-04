@@ -157,6 +157,4 @@ Source: [Michael Feathers' blog](http://www.artima.com/weblogs/viewpost.jsp?thre
 
 --
 ###### Exercise
-### Hangman
-
-http://lms.10x.org.il/item/47/
+[Unit testing](Unit-Testing.html)

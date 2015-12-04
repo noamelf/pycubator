@@ -55,7 +55,7 @@
 
 --
 ###### Exercise
-see http://lms.10x.org.il/item/46/
+[Python Classes](Python-Classes.html)
 
 ---
 
@@ -78,10 +78,6 @@ From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%2
 - Make sure to call the `__init__` of the super class
 
 --
-###### Exercise
-http://lms.10x.org.il/item/116/
-
---
 
 ##### advanced
 ## Multiple inheritance
@@ -94,9 +90,14 @@ http://lms.10x.org.il/item/116/
 - Attributes will be resolved via the MRO (Method Resolution Order)
 - `Circle.mro()`
 
+--
+
+###### Exercise
+[Class inheritance](Class-Inheritance.html)
+
 ---
 
-##### advanced
+##### Advanced
 # Python Magic! (methods)
 <!-- .slide: data-background="img/magic_mist.jpg" -->
 

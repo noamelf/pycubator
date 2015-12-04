@@ -49,27 +49,9 @@ The National Archives UK
             f.writelines(fruits)
 
 --
-###### Exercise #1
-### Simple reader
--   Read a file one line at a time, and print the number of the line (start with one) and
-    the line content.
--   For example, for this input:
+###### Exercises
 
-        Ami
-        Udi
-        Assaf
-
--   The output will be:
-
-        1 Ami
-        2 Udi
-        3 Assaf
-
---
-###### Exercise #2
-### Robot Position Tracker
-
-See http://lms.10x.org.il/item/35/
+[Work with files](Files.html)
 
 ---
 
@@ -373,10 +355,9 @@ See http://lms.10x.org.il/item/35/
 
 --
 
-###### Exercise #3
-### File Information by Extension
+###### Exercises
 
-See http://lms.10x.org.il/item/91/
+[The standard library](The-Standard-Library.html)
 
 ---
 

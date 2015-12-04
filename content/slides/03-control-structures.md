@@ -129,7 +129,7 @@
 
 --
 ###### Exercises
-[for loops](for-loops.html)
+[for loops](For-Loops.html)
 
 ---
 
