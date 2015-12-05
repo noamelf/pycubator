@@ -17,7 +17,7 @@ exploration and participation.
 ## Contributing
 -   Slides are at `content/slides/` and are in MD form so it's very easy to edit them.
 -   Exercises are Jupyter (IPython) notebooks residing at `content/exercises`.
--   After making some changes follow [running locally](#Running locally)
+-   After making some changes follow [running locally](#running-locally)
 
 ## Contributors
 * [Noam Elfanbaum](https://twitter.com/noamelf)
