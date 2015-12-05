@@ -81,7 +81,7 @@
 * Quick!
 * Helps test Python behaviour
 * Get information with `help()`
-* But... does'nt play nice with multiline code (i.e. classes, functions)
+* But... doesn't play nice with multiline code (i.e. classes, functions)
 
 --
 
