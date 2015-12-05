@@ -103,7 +103,7 @@ Variables ("names") can be deleted with del:
         True
         >>> 5 < 7 <= 10:
         True
-        >>> 'abc' > 'abd'
+        >>> 'abd' > 'abc'
         True
 
 
