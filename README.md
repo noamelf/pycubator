@@ -2,9 +2,12 @@
 
 Live slides are at [pycubator.com](http://pycubator.com)
 
-Pycubator (Python incubator) is a collection of slides for teaching Python.
+Pycubator (Python Incubator) is a collection of slides for teaching Python.
 These slides are meant to be used in a teacher-led classroom, but also, put a strong emphasis on student
-exploration and participation.
+exploration and participation. The leading pricples are:
+
+-   Talk less, practice more.
+-   Real world examples
 
 ## Running locally
 -   Run `python3 build.py` script to generate the HTML files.
