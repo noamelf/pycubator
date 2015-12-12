@@ -1,12 +1,15 @@
 # Pycubator
 
-[![Join the chat at https://gitter.im/noamelf/pycubator](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/noamelf/pycubator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/noamelf/pycubator][gitter-img]][gitter-site]
 
-Live slides are at [pycubator.com](http://pycubator.com)
+Live slides are at [pycubator.com][pyc]
 
 Pycubator (Python Incubator) is a collection of slides and exercises for teaching Python.
-These slides are meant to be used in a teacher-led classroom, but also, put a strong emphasis on student
-exploration and participation. The leading pricples are:
+These slides are meant to be used in a teacher-led classroom, but also, put a strong emphasis on student exploration and participation. 
+
+It utilizes [RevealJS][rjs] to create stunning slides, that are actually written in Markdown and hence easy to use with source control, and the exercises uses [Jupyter notebooks][jn] to reduce the amount boilerplate code the students needs to write. 
+
+Pycubator leading principles are:
 
 -   Talk less, practice more.
 -   Real world examples
@@ -26,5 +29,16 @@ exploration and participation. The leading pricples are:
 
 ---
 
-![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
+[![This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License][cc-img]][cc-site]
+
+
+[cc-img]: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+[cc-site]: http://creativecommons.org/licenses/by-sa/4.0/
+
+[gitter-img]: https://badges.gitter.im/Join%20Chat.svg
+[gitter-site]: https://gitter.im/noamelf/pycubator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+[rjs]: https://github.com/hakimel/reveal.js/
+[jn]: http://jupyter.org/
+[pyc]: http://pycubator.com
+
