@@ -31,7 +31,7 @@
     print(msg)
 
 --
-### Trinary operator
+### Ternary operator
 
     x = int(input())
     msg = 'Higher than five' if x > 5 else 'Equel or lower than five'
