@@ -96,7 +96,7 @@
     10,9,8,7,6,5,4,3,2,1,
 
 --
-### Range defenition
+### Range definition
 
 *   `range(n)` produces `[0, 1, ..., n-1]`
 *   `range(i, j)` produces `[i, i+1, ..., j-1]`
@@ -111,7 +111,7 @@
             print i, j
 
 --
-### Enumarate
+### Enumerate
     >>> for i, c in enumerate('Hello World!'):
             print(i, c)
     0 H
@@ -136,7 +136,7 @@
 # Functions
 
 --
-### Defenition
+### Definition
 
     >>> def increment(x):
             return x + 1

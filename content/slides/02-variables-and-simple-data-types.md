@@ -5,7 +5,7 @@
 
 ---
 
-# Variables and comparisions
+# Variables and comparisons
 
 --
 
@@ -207,7 +207,7 @@ Triple quoting allows multi-line string in your code:
     GHI'''
 
 --
-### String Literal Escape Squences
+### String Literal Escape Sequences
 
 Notable escape sequences in string literals:
 
