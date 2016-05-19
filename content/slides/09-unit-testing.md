@@ -157,4 +157,4 @@ Source: [Michael Feathers' blog](http://www.artima.com/weblogs/viewpost.jsp?thre
 
 --
 ###### Exercise
-[Unit testing](Unit-Testing.html)
+[Unit testing](http://lms.10x.org.il/item/47/)

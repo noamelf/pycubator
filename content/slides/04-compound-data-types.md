@@ -73,7 +73,7 @@
 
 --
 ###### Exercises
-[Slicing Joining and More](Slicing-Joining-and-More.html)
+[Slicing Joining and More](http://lms.10x.org.il/item/30/)
 
 ---
 
@@ -278,7 +278,7 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ###### Exercise
 
-[Lists exercises](Lists.html)
+[Lists exercises](http://lms.10x.org.il/item/148/)
 
 ---
 
@@ -353,7 +353,7 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ###### Exercises
 
-[Dictionaries exercises](Dictionaries.html)
+[Dictionaries exercises](http://lms.10x.org.il/item/37/)
 
 
 ---
@@ -382,7 +382,7 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ##### Advance Exercise
 
-[Sets vs. Lists](Sets-vs-Lists.html)
+[Sets vs. Lists](http://lms.10x.org.il/item/90/)
 
 ---
 
@@ -480,4 +480,4 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ###### Exercise
 
-[Comprehensions exercises](Comprehensions.html)
+[Comprehensions exercises](http://lms.10x.org.il/item/41/)

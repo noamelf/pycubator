@@ -64,7 +64,7 @@
 --
 ###### Exercises
 
-[while-and-input](While-and-Input.html)
+[while-and-input](http://lms.10x.org.il/item/12/)
 
 ---
 
@@ -129,7 +129,7 @@
 
 --
 ###### Exercises
-[for loops](For-Loops.html)
+[for loops](http://lms.10x.org.il/item/15/)
 
 ---
 
