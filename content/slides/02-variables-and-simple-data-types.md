@@ -340,5 +340,5 @@ All the methods bellow return new string (there is no in place operations!).
 
 --
 ###### Exercise
-[Sons and Daughters](sons-and-daughters.html)
+[Sons and Daughters](Sons-and-Daughters.html)
 (string formating)

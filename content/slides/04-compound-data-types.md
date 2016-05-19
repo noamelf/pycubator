@@ -73,7 +73,7 @@
 
 --
 ###### Exercises
-[Slicing Joining and More](slicing-joining-and-more.html)
+[Slicing Joining and More](Slicing-Joining-and-More.html)
 
 ---
 
@@ -92,7 +92,7 @@
         list
 
 --
-### Modilfying
+### Modifying
 
 -   Appending values to the list:
 
