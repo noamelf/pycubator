@@ -64,7 +64,7 @@
 --
 ###### Exercises
 
-[while-and-input](while-and-input.html)
+[while-and-input](While-and-Input.html)
 
 ---
 
