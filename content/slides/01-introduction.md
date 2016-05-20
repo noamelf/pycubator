@@ -5,14 +5,12 @@
 
 --
 
-### About
+### Python, what?
 
 * Guido Van-Rossum side project in the late 1980's
 * Called after the Monty Python (comedy) group
 * Community-driven
 * Can be found on almost every platform and every field
-* Easy to extend using C and package system
-* 2 main versions: Python2 and Python3
 * Beautiful
 
 --
@@ -57,9 +55,46 @@
 * Clarity over speed
 * We are all consenting adults here
 
+
 ---
 
-# The REPL
+# Interlude
+
+--
+### Why learn Python?
+
+* Easy and practical to learn (see [Python is Now the Most Popular Introductory Teaching
+Language at Top U.S. Universities][usage])
+* Industrial strength, used by: Google, Facebook(Instagram), Microsoft, Dropbox, etc.
+* Utilized in many fields - web, data science, ops, automation, AI and much more.
+
+[usage]: http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext
+
+--
+
+### How is Python made?
+* Community of [volunteers][core-dev], aka core developers ([you can also be one][be-core-dev])
+* Transparent flow through Python Enhancement Proposals ([PEPs][PEPs])
+
+[PEPs]: https://www.python.org/dev/peps/
+[core-dev]: https://hg.python.org/committers.txt
+[be-core-dev]: https://docs.python.org/devguide/coredev.html
+
+--
+
+### Python2 vs. Python3
+* Python3 is an attempt to improve Python2 design.
+* Not backward compatible!
+* Python2 will only receive security updates
+* Python3 is continuing to advance (performance, async programing, etc.)
+
+---
+
+# Coding tools
+
+---
+
+## The REPL
 (Read Evaluate Print Loop)
 
 --
@@ -85,9 +120,10 @@
 
 --
 
+###### Exercise
 ### Python as a calculator
 
-*   Try running this in your python shell:
+* Try running the following in your python shell:
 
         >>> 10 + 10
         20
@@ -103,9 +139,8 @@
 
 ---
 
-# IPython
+## IPython
 ### (REPL on steroids)
-
 
 --
 
@@ -118,11 +153,16 @@
 
 * Use `tab` for autocomplete.
 * Append a `?` to an end of a variable, a function, a class and more to get some help.
+* Execute regular shell commands from within Ipython: `!ls`
 * `%magic` commands are really cool. Try `%history`, `%save` and `%pastebin` for example.
+
+--
+
+### Use it!
 
 ---
 
-# .py files
+## .py files
 
 --
 
@@ -140,7 +180,7 @@
 
 ---
 
-# IDE
+## IDE
 
 --
 
@@ -161,9 +201,8 @@
 
 ---
 
-##### advanced
-# Some more theory
-
+##### Advanced
+## Some more theory
 
 --
 
@@ -192,11 +231,13 @@
 
 ### Style overview
 
--    [PEP 8](https://www.python.org/dev/peps/pep-0008/) - code is read much more often than it is written
+-    [PEP 8][pep8] - code is read much more often than it is written
 -    Blocks are denoted by whitespace
 -    Use spaces, not tabs (or set the editor to insert spaces instead of tabs)
 -    Single line comments are denoted with #
 -    Multi-line comments are denoted with '''
+
+[pep8]: https://www.python.org/dev/peps/pep-0008/
 
 --
 

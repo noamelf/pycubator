@@ -293,7 +293,6 @@ All the methods bellow return new string (there is no in place operations!).
 
     'hello ' * 3  # -> 'hello hello hello '
 
---
 ---
 
 # Interactive Input and string formatting
