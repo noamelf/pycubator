@@ -8,7 +8,6 @@
 # Variables and comparisons
 
 --
-
 ### Assignment
 
 Variables in python can hold values. This is done using the assignment operator:
@@ -51,7 +50,8 @@ You can modify the values in any variable by reassigning the value:
 --
 ### Naming convention
 
-According to Python conventions, variable names should be lowercase with words separated by underscores:
+According to Python conventions, variable names should be lowercase with words separated
+by underscores:
 
     # Good
     age = 12
@@ -84,7 +84,7 @@ According to Python conventions, variable names should be lowercase with words s
 ##### advanced
 ###  Deleting names
 
-Variables ("names") can be deleted with del:
+Variables ("names") can be deleted with del (but I didn't encounter a reason to do that yet):
 
     >>> x = 100
     >>> x
@@ -145,8 +145,7 @@ Let's run them through an "if" statement:
 -   The following act like `False`:
     -   `None`
     -   `0`
-    -   `[]`(or any other empty sequence)
-    -   `''` (empty string)
+    -   `[]`(or any other empty sequence, strings included)
 -   Everything else acts like `True`
 
 --
