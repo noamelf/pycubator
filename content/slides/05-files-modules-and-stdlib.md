@@ -51,11 +51,11 @@ The National Archives UK
 --
 ###### Exercises
 
-[Work with files](Files.html)
+[Work with files](http://lms.10x.org.il/item/35/)
 
 ---
 
-# Modules and packeges
+# Modules and packages
 
 --
 ### The import statement
@@ -357,7 +357,7 @@ The National Archives UK
 
 ###### Exercises
 
-[The standard library](The-Standard-Library.html)
+[The standard library](http://lms.10x.org.il/item/144/)
 
 ---
 

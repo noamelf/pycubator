@@ -55,7 +55,7 @@
 
 --
 ###### Exercise
-[Python Classes](Python-Classes.html)
+[Python Classes](http://lms.10x.org.il/item/46/)
 
 ---
 
@@ -93,7 +93,7 @@ From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%2
 --
 
 ###### Exercise
-[Class inheritance](Class-Inheritance.html)
+[Class inheritance](http://lms.10x.org.il/item/116/)
 
 ---
 
