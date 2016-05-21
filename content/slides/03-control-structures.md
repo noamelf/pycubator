@@ -41,7 +41,7 @@
 ### Simple while
 
     while True:
-        name = input('Enter your name (or nothing to exit): ')
+        name = input('Enter your name: ')
         print('Hello {}!'.format(name))
 
 --
@@ -64,7 +64,7 @@
 --
 ###### Exercises
 
-[while-and-input](http://lms.10x.org.il/item/12/)
+`while` and `if` [exercises](http://lms.10x.org.il/item/12/)
 
 ---
 

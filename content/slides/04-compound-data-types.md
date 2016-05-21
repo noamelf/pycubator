@@ -314,7 +314,7 @@ Keep in mind this is a SHALLOW copy of l:
 
 --
 
-### Powerful assigments
+### Powerful assignments
 
     x, y = 'hi', 'man'
     x, y = y, x

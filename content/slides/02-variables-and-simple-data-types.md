@@ -77,7 +77,7 @@ by underscores:
 
 -   In a python script, each variable must be assigned before it is accessed:
 
-        print x  # This line raises NameError
+        print(x)  # This line raises NameError
         x = 1
 
 --
@@ -299,17 +299,17 @@ All the methods bellow return new string (there is no in place operations!).
 
 --
 ### Interactive Input
-- `raw_input()` on python2
-- `input()` on python3
+- `input()`
 - `input(prompt)` prints `prompt` before reading input
+- **Notice!** in Python2 it's `raw_input()`
 
 --
-### Basic formating
+### Formating
 
     name = 'Tom'
 
     # Bad style formatting
-    print('hello ' + name)
+    print('hello ' + name + '!' )
 
     # Old style formatting
     print('Hello %s!' % name)
@@ -318,15 +318,38 @@ All the methods bellow return new string (there is no in place operations!).
     print('Hello {}!'.format(name))
 
 --
-### More formating
+
 -   Named formatting
 
-        >>> '{name} {age}'.format(age=5, name='Mike')
-        mike 5
+        TMPL = 'You got an error in {file} line {line}'
+        #.....
+        # ....
 
--   `{:4}{:7}` at least x number of chars
--   `{:b}{:x}` formats number as binary or hex
--   in short,`{name!conversion:format}` provides options on top of `{}`
+        print(TMPL.format(file='a.py', line=5))
+
+-   positional formatting
+
+        >>> print('{0} {0}, {1}'.format('repeat me','not me'))
+        repeat me repeat me not me
+
+--
+
+-   String is at least x number of chars: `{:x}` (great for painting tables)
+
+        TEST_RESULTS_TMPL = '{test:40} {status:10}'
+        print(TEST_RESULTS_TMPL.format(test='NDU', status='Failed'))
+        print(TEST_RESULTS_TMPL.format(test='Cluster expansion', status='Succeed'))
+        ---
+        NDU                                      Failed
+        Cluster expansion                        Succeed
+--
+
+-   Format number as binary `{:b}` or hex `{:x}`
+
+        >>> print('{:b}'.format(5))
+        101
+
+-    in short,`{name!conversion:format}` provides options on top of `{}`
 
 --
 ### Resources
@@ -338,5 +361,4 @@ All the methods bellow return new string (there is no in place operations!).
 
 --
 ###### Exercise
-[Sons and Daughters](http://lms.10x.org.il/item/123/)
-(string formating)
+[Input and string formatting exercises](http://lms.10x.org.il/item/123/)
