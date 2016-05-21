@@ -41,7 +41,7 @@
 ### Simple while
 
     while True:
-        name = input('Enter your name (or nothing to exit): ')
+        name = input('Enter your name: ')
         print('Hello {}!'.format(name))
 
 --
@@ -64,7 +64,7 @@
 --
 ###### Exercises
 
-[while-and-input](while-and-input.html)
+`while` and `if` [exercises](http://lms.10x.org.il/item/12/)
 
 ---
 
@@ -96,7 +96,7 @@
     10,9,8,7,6,5,4,3,2,1,
 
 --
-### Range defenition
+### Range definition
 
 *   `range(n)` produces `[0, 1, ..., n-1]`
 *   `range(i, j)` produces `[i, i+1, ..., j-1]`
@@ -111,7 +111,7 @@
             print i, j
 
 --
-### Enumarate
+### Enumerate
     >>> for i, c in enumerate('Hello World!'):
             print(i, c)
     0 H
@@ -129,14 +129,14 @@
 
 --
 ###### Exercises
-[for loops](For-Loops.html)
+[for loops](http://lms.10x.org.il/item/15/)
 
 ---
 
 # Functions
 
 --
-### Defenition
+### Definition
 
     >>> def increment(x):
             return x + 1

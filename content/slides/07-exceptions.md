@@ -3,7 +3,7 @@
 
 ---
 
-# Basics
+# Catching Exceptions 
 
 --
 
@@ -41,10 +41,32 @@ An exception is a signal that an error or other unusual condition has occurred.
 
 --
 ###### Exercise
-### Devide by zero
+### Divide by zero
 
 -   Try to divide `1/0`. What happens?
 -   Catch the exception and tell the user he cannot divide by zero.
+
+--
+### Catching multiple exceptions
+
+Handling them all the same way
+
+    try:
+        execute_some_code()
+    except (SomeException, AnotherException):
+        handle_gracefully()
+
+
+--
+
+Handling them separately
+
+    try:
+        execute_some_code()
+    except SomeException:
+        handle_gracefully()
+    except AnotherException:
+        do_another_thing()
 
 ---
 
@@ -98,32 +120,7 @@ exception handling for general application control flow. EOFError, for example.
 
 ---
 
-# Intermediate
-
---
-### Catching multiple exceptions
-
-Handling them all the same way
-
-    try:
-        execute_some_code()
-    except (SomeException, AnotherException):
-        handle_gracefully()
-
-
---
-
-### Catching multiple exceptions
-
-Handling them separately
-
-    try:
-        execute_some_code()
-    except SomeException:
-        handle_gracefully()
-    except AnotherException:
-        do_another_thing()
-
+# Raising, Accessing and Propagating 
 
 --
 
@@ -131,10 +128,8 @@ Handling them separately
 
 Exceptions can be raised using `raise <exception>` with optional arguments.
 
-```python
-raise RuntimeError()
-raise RuntimeError("error message")
-```
+    raise RuntimeError()
+    raise RuntimeError("error message")
 
 --
 
@@ -170,7 +165,7 @@ The (default) root exception handler terminates the Python process.
 
 ### Propagating exceptions
 
-Propagation can be forced by using raise without arguments.
+Propagation can be forced by using raise without arguments,
 this re-raises the most recent exception.
 
     try:
@@ -197,7 +192,7 @@ This is useful for e.g. exception logging.
 
 ---
 
-# Advanced
+# Finally and Else
 
 --
 ### Finally
@@ -222,8 +217,11 @@ Code in the `else` block will be executed when no exception is raised
     else:
         print('Everything went according to plan')
 
---
+---
 
+# Writing exceptions
+
+--
 ### Inheritance
 -   Exceptions are matched by superclass relationships.
     -   RuntimeError

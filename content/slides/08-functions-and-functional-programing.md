@@ -138,7 +138,7 @@ function calls
 
 --
 ##### advanced
-### iterator expension
+### iterator expansion
 
     a, *the_rest = range(4)
     print(the_rest)
@@ -389,7 +389,7 @@ function calls
         func = decmaker(argA, argB, ...)(func)
 
 --
-### Deorator example
+### Decorator example
 
     import urllib
     from functools import lru_cache

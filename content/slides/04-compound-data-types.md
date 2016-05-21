@@ -73,7 +73,7 @@
 
 --
 ###### Exercises
-[Slicing Joining and More](slicing-joining-and-more.html)
+[Slicing Joining and More](http://lms.10x.org.il/item/30/)
 
 ---
 
@@ -92,7 +92,7 @@
         list
 
 --
-### Modilfying
+### Modifying
 
 -   Appending values to the list:
 
@@ -278,7 +278,7 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ###### Exercise
 
-[Lists exercises](Lists.html)
+[Lists exercises](http://lms.10x.org.il/item/148/)
 
 ---
 
@@ -314,7 +314,7 @@ Keep in mind this is a SHALLOW copy of l:
 
 --
 
-### Powerful assigments
+### Powerful assignments
 
     x, y = 'hi', 'man'
     x, y = y, x
@@ -353,7 +353,7 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ###### Exercises
 
-[Dictionaries exercises](Dictionaries.html)
+[Dictionaries exercises](http://lms.10x.org.il/item/37/)
 
 
 ---
@@ -382,7 +382,7 @@ Keep in mind this is a SHALLOW copy of l:
 --
 ##### Advance Exercise
 
-[Sets vs. Lists](Sets-vs-Lists.html)
+[Sets vs. Lists](http://lms.10x.org.il/item/90/)
 
 ---
 
@@ -395,45 +395,46 @@ Keep in mind this is a SHALLOW copy of l:
 - `[expr for v in iter]`
 - `[expr for v in iter if cond]`
 - This:
-```python
-res = []
-for v1, v2 in lst:
-    if v1 > v2:
-        res.append(v1 * v2)
-```
+
+        res = []
+        for v1, v2 in lst:
+            if v1 > v2:
+                res.append(v1 * v2)
+
 - Becomes that:
-```python
-res = [v1 * v2 for v1, v2 in lst if v1 > v2]
-```
+
+        res = [v1 * v2 for v1, v2 in lst if v1 > v2]
+
 
 --
 ### Nested List Comprehensions
 - This:
-```python
-res = []
-for y in lst2:
-    inter = []
-    for x in lst1:
-        inter.append(x)
-```
+
+        res = []
+        for y in lst2:
+            inter = []
+            for x in lst1:
+                inter.append(x)
+
 - Becomes that:
-```python
-[[x for x in lst1] for y in lst2]
-```
+
+        [[x for x in lst1] for y in lst2]
+
 
 --
 ### Dictionary Comprehensions
 - Like lists but swap `[]` for `{}`
 - This:
-```python
-d = dict()
-for k, v in lst:
-    d[k] = v
-```
+
+        d = dict()
+        for k, v in lst:
+            d[k] = v
+
+
 - Becomes that:
-```python
-{k: v for k,v in lst}
-```
+
+        {k: v for k,v in lst}
+
 
 --
 ### Set Comprehensions
@@ -451,16 +452,16 @@ for k, v in lst:
 
 --
 ### Tuple Comprehensions?
-```python
-tup = (x for x in lst)
-type(tup)
-<class 'generator'>
-```
+
+        tup = (x for x in lst)
+        type(tup)
+        <class 'generator'>
+
 - We'll cover generators later
 
 ---
 
-# Itearators Builtins
+# Iterators Builtins
 
 --
 
@@ -479,4 +480,4 @@ type(tup)
 --
 ###### Exercise
 
-[Comprehensions exercises](Comprehensions.html)
+[Comprehensions exercises](http://lms.10x.org.il/item/41/)
