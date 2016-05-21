@@ -33,21 +33,21 @@ Language at Top U.S. Universities][usage])
 
 --
 
+![](img/guido.jpg)
+
+That's Guido Van-Rossum, Python creator ^^
+
+--
+
 "Let me introduce myself. I'm a nerd, a geek. I'm probably somewhere on the autism spectrum.
 I'm also a late bloomer. I graduated from college when I was 26. I was 45 when I got married.
 I'm now 60 years old, with a 14 year old son... I'm no Steve Jobs or Mark Zuckerberg. But at age 35
 I created a programming language that got a bit of a following. What happened next was pretty
 amazing..."
 
-Guido Van-Russum [king's day speech][speech]
+Guido's, [king's day speech][speech]
 
 [speech]: http://neopythonic.blogspot.co.il/2016/04/kings-day-speech.html
-
---
-
-![](img/guido.jpg)
-
-That's Guido ^^
 
 --
 
@@ -125,7 +125,7 @@ That's Guido ^^
 ###  Why Python 3?
 * Guido wanted to change some of the language design decisions (mainly string encoding)
 * Financing was supplied by Google.
-* A new language was born
+* A (somewhat) new language was born
 
 --
 
@@ -194,6 +194,7 @@ And much, much more, but we'll get to that later...
 
 * What does `**` do?
 * What does `%` do?
+* What does `import this` do?
 
 ---
 
