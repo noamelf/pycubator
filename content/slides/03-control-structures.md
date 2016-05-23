@@ -21,7 +21,7 @@
 --
 ### Simple if
 
-    x = int(input())  # Remember python2 is uses raw_input()
+    x = int(input())  # Remember to use raw_input() in python2
     if x > 5:
         msg = 'Higher than five'
     elif x == 5:
@@ -59,7 +59,7 @@
         print('Wrong password!')
 
 
-    print 'Welcome!'
+    print('Welcome!')
 
 --
 ###### Exercises
@@ -108,7 +108,7 @@
 
     for i in range(10):
         for j in range(10):
-            print i, j
+            print(i, j)
 
 --
 ### Enumerate
@@ -149,4 +149,8 @@
 *   All functions return a value (None if not specified)
 *   Parameter data types are not specified either
 
+--
+###### Exercise
 
+[Functions](http://lms.10x.org.il/item/145/)
+(Progress bar, 2 exercises)

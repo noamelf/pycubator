@@ -113,7 +113,7 @@ The National Archives UK
 
         # main.py
         from foo import greeting
-        print greeting()
+        print(greeting())
 
 --
 ##### advanced
