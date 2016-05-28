@@ -1,5 +1,5 @@
 <!-- .slide: data-background="img/function.jpg" -->
-# Functions and functional programing
+# Functions and Functional Programming
 ### Pycubator
 
 ---

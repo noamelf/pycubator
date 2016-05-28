@@ -65,7 +65,7 @@ From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%2
 "The Young Heir Takes Possession Of The Miser's Effects".
 --
 
-## Single inheritance
+### Single inheritance
 
     class Circle(Shape):
         def __init__(self):
@@ -76,6 +76,48 @@ From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%2
 - `object` is the default base class
 - `class Circle(Shape)`: inherits from Shape
 - Make sure to call the `__init__` of the super class
+
+--
+
+```python
+class Animal:
+    def make_sound(self):
+        print self.sound
+
+class Cat(Animal):
+    sound = "meow"
+
+class Duck(Animal):
+    sound = "quack"
+
+c = Cat()
+c.make_sound()
+
+d = Duck()
+d.make_sound()
+```
+
+--
+
+```python
+class TitleRenderer:
+    def render(self, s):
+        return "* {} *".format(s)
+
+
+class UppercaseTitleRenderer(TitleRenderer):
+    def render(self, s):
+        return super().render(s).upper()
+        # in python2:
+        # return super(UppercaseTitleRenderer, self).render(s).upper()
+
+
+t = TitleRenderer()
+print(t.render("hello"))
+
+u = UppercaseTitleRenderer()
+print(u.render("hello"))
+```
 
 --
 
@@ -211,6 +253,23 @@ From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%2
     - Gets called in `x.attr`
 - Decorate with `@attr.setter` to replace attribute setter
     - Gets called in `x.attr = val`
+
+--
+
+```
+import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    @property
+    def area(self):
+        return self.radius ** 2 * math.pi
+
+c = Circle(2)
+print(c.area)
+```
 
 --
 ## Super

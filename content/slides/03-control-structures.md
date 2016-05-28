@@ -1,5 +1,5 @@
 <!-- .slide: data-background="img/puzzles.jpg" -->
-# Control structures
+# Control Structures
 
 ### Pycubator
 

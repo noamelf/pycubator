@@ -1,4 +1,4 @@
-# Compound data types
+# Compound Data Types
 <!-- .slide: data-background="img/puzzles.jpg" -->
 
 --
