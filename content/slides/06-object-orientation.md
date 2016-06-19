@@ -81,8 +81,9 @@ From William Hogarth's [A Rake's Progress](http://en.wikipedia.org/wiki/A_Rake%2
 
 ```python
 class Animal:
+    sound = None
     def make_sound(self):
-        print self.sound
+        print(self.sound)
 
 class Cat(Animal):
     sound = "meow"
@@ -184,16 +185,6 @@ print(u.render("hello"))
 - `__add__, __sub__, __mod__, __xor__, ...`
 - Additional methods for += and others
 
---
-
-## getattr
-- `x.value` &srarr; `getattr(x, 'value')`
-- Useful when the attribute name is defined at runtime
-- `getattr(self, name)` calls `__getattribute__(self, name)` which falls back on `__getattr__(self, name)`
-- Defining `__getattr__` is useful to specify default values
-- `getattr(x, 'value', default)` lets you give a default if everything else fails
-
-
 ---
 
 ##### advanced
@@ -272,7 +263,7 @@ print(c.area)
 ```
 
 --
-## Super
+## `Super` - deep dive
 
 - `super(cls, obj)` &srarr; `super(C, self)`
     - When wish to call super outside a class method you need to provide it with the class name and it's content.
@@ -280,3 +271,11 @@ print(c.area)
     - It's bound &srarr; obj gets inserted into method calls
 - `super()`
     - when called in an instance method of a class, will call it's root class.
+
+--
+## getattr
+- `x.value` &srarr; `getattr(x, 'value')`
+- Useful when the attribute name is defined at runtime
+- `getattr(self, name)` calls `__getattribute__(self, name)` which falls back on `__getattr__(self, name)`
+- Defining `__getattr__` is useful to specify default values
+- `getattr(x, 'value', default)` lets you give a default if everything else fails

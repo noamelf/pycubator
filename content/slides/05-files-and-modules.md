@@ -92,17 +92,18 @@ The National Archives UK
     [another story](https://www.python.org/dev/peps/pep-0420/)
 
 --
+```python
+# fruits/__init__.py
+# -- empty -- nothing here -- really nothing -- just a lonely, empty file
 
-    # fruits/__init__.py
-    # -- empty -- nothing here -- really nothing -- just a lonely, empty file
+# fruits/apple.py
+def print_it():
+    print('apple')
 
-    # fruits/apple.py
-    def say_in_hebglish(): print('Tapuach')
-
-    # main.py
-    from fruits import apple
-    apple.say_in_hebglish()
-
+# main.py
+from fruits import apple
+apple.print_it()
+```
 --
 
 -   If a folder contains an `__init__.py` file, it can be imported as the name of the package itself.
@@ -117,7 +118,7 @@ The National Archives UK
 
 --
 ##### advanced
-### Modules are singeltones
+### Modules are singletons
 
     # stuff.py
     fruits = ['Pineapple']
