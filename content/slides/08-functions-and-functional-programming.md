@@ -125,31 +125,11 @@ function calls
 
 --
 ###### exercise
-
--   implement the `inventory_str` function
-
-        expected_result = '''The following Toyota models are availble:
-        Corola - 7
-        Auris - 5
-        Camary - 10'''
-
-        result = inventory_str('toyota', camary=10, auris=5, corola=7)
-        assert  result == expected_result
-
---
-##### advanced
-### iterator expansion
-
-    a, *the_rest = range(4)
-    print(the_rest)
-
-    # output
-    (1, 2, 3)
-
-
--   Only works on Python3
--   `a,*var_name = range(5)`: `var_name` is list taking 0 or more values
-
+Implement `person_details` with kwargs
+```python
+# output
+assert person_details(name='Mike', age=28) == 'Mike is 28 years old'
+```
 --
 
 ### `*` in Function Call
@@ -182,6 +162,20 @@ function calls
 - `person` must be a dictionary of form `{'string': val, ...}`
 - It gets unpacked as the keyword arguments of `print_person`
 
+
+--
+##### advanced
+### iterator expansion
+
+    a, *the_rest = range(4)
+    print(the_rest)
+
+    # output
+    (1, 2, 3)
+
+
+-   Only works on Python3
+-   `a,*var_name = range(5)`: `var_name` is list taking 0 or more values
 
 --
 ##### advanced
