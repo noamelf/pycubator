@@ -183,7 +183,7 @@ This is useful for e.g. exception logging.
 --
 ### Practice
 
--   Read this [numbers.txt](content/exercises/numbers.txt) file (don't use the `with` statement).
+-   Read this [numbers.txt](content/exercises/numbers.txt) file.
 -   Add the integers in the file together, and print the sum at the end.
 -   You need to except the following exceptions and let the user know the problem:
     - `IOError`: if there is a problem opening the file.
