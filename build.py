@@ -2,12 +2,13 @@
 
 from pathlib import Path
 import sys
+import os
 
 from jinja2 import Environment, FileSystemLoader
 from nbconvert.exporters import HTMLExporter
 from nbconvert.preprocessors import ClearOutputPreprocessor
 templates = None
-
+DOCS_DIR = 'docs'
 
 def get_tmpl(name):
     global templates
@@ -32,23 +33,26 @@ def get_md_files():
 
 def pre_clean():
     p = Path('.')
-    for i in p.glob('*.html'):
+    for i in p.glob(DOCS_DIR + '/*.html'):
         i.unlink()
 
 
 def generate_slides(md_files):
     slide_tmpl = get_tmpl('slide.j2')
+    if not os.path.exists(DOCS_DIR):
+        os.mkdir(DOCS_DIR)
     for md_file, html_file, title in md_files:
         rendered_template = slide_tmpl.render(mdfile=md_file, title=title)
 
-        with open(html_file, 'w') as f:
+        filepath = os.path.join(DOCS_DIR, html_file)
+        with open(filepath, 'w') as f:
             f.write(rendered_template)
 
 
 def generate_index(md_files):
     index_tmpl = get_tmpl('index.j2')
-
-    with open('index.html', 'w') as f:
+    filepath = os.path.join(DOCS_DIR, 'index.html')
+    with open(filepath, 'w') as f:
         f.write(index_tmpl.render(slides=md_files))
 
 
