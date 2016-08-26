@@ -1,14 +1,17 @@
 #! /usr/bin/python3
 
-from pathlib import Path
 import sys
-import os
+from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 from nbconvert.exporters import HTMLExporter
 from nbconvert.preprocessors import ClearOutputPreprocessor
+
 templates = None
 DOCS_DIR = 'docs'
+SLIDES_DIR = [DOCS_DIR, 'slides']
+EXERCISES_DIR = [DOCS_DIR, 'exercises']
+
 
 def get_tmpl(name):
     global templates
@@ -25,39 +28,40 @@ def extract_slide_title(md_file):
 
 
 def get_md_files():
-    p = Path('content', 'slides')
+    p = Path(*SLIDES_DIR)
     for md_file in sorted(p.iterdir()):
         if md_file.suffix == '.md':
-            yield str(md_file), md_file.with_suffix('.html').name, extract_slide_title(md_file)
+            yield str(md_file.relative_to('docs')), md_file.with_suffix(
+                '.html').name, extract_slide_title(md_file)
 
 
 def pre_clean():
-    p = Path('.')
-    for i in p.glob(DOCS_DIR + '/*.html'):
+    p = Path(DOCS_DIR)
+    for i in p.glob('*.html'):
         i.unlink()
 
 
 def generate_slides(md_files):
     slide_tmpl = get_tmpl('slide.j2')
-    if not os.path.exists(DOCS_DIR):
-        os.mkdir(DOCS_DIR)
     for md_file, html_file, title in md_files:
         rendered_template = slide_tmpl.render(mdfile=md_file, title=title)
 
-        filepath = os.path.join(DOCS_DIR, html_file)
-        with open(filepath, 'w') as f:
+        p = Path(DOCS_DIR, html_file)
+        with p.open('w') as f:
             f.write(rendered_template)
 
 
 def generate_index(md_files):
     index_tmpl = get_tmpl('index.j2')
-    filepath = os.path.join(DOCS_DIR, 'index.html')
-    with open(filepath, 'w') as f:
-        f.write(index_tmpl.render(slides=md_files))
+    rendered_index = index_tmpl.render(slides=md_files)
+
+    p = Path(DOCS_DIR, 'index.html')
+    with p.open('w') as f:
+        f.write(rendered_index)
 
 
 def generate_exercises():
-    p = Path('content', 'exercises')
+    p = Path(*EXERCISES_DIR)
     exporter = HTMLExporter()
     exporter.register_preprocessor(ClearOutputPreprocessor(), enabled=True)
 
