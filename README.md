@@ -1,7 +1,5 @@
 # Pycubator
 
-[![Join the chat at https://gitter.im/noamelf/pycubator][gitter-img]][gitter-site]
-
 Live slides are at [pycubator.com][pyc]
 
 Pycubator (Python Incubator) is a collection of slides and exercises for teaching Python.
@@ -16,11 +14,11 @@ Pycubator leading principles are:
 
 ## Running locally
 -   Run `python3 build.py` script to generate the HTML files.
--   Run `python3 -m http.server` and open your browser!
+-   Run `cd docs && python3 -m http.server` and open your browser!
 
 ## Contributing
--   Slides are at `content/slides/` and are in MD form so it's very easy to edit them.
--   Exercises are Jupyter (IPython) notebooks residing at `content/exercises`.
+-   Slides are at `docs/slides/` and are in MD form so it's very easy to edit them.
+-   Exercises are Jupyter (IPython) notebooks residing at `docs/exercises`.
 -   After making some changes follow [running locally](#running-locally)
 
 ## Contributors
