@@ -159,7 +159,7 @@ $ rmdir ~/tmp
 rmdir: failed to remove ‘tmp’: Directory not empty
 $ rm tmp/example.txt
 $ rmdir ~/tmp
-# or you can remove the whole dir recursevly with -r (dangerous!)
+# or you can remove the whole dir recursively with -r (dangerous!)
 $ rm -r tmp1
 ```
 

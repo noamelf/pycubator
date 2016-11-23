@@ -25,7 +25,7 @@
     if x > 5:
         msg = 'Higher than five'
     elif x == 5:
-        msg = 'Equels five'
+        msg = 'Equals five'
     else:
         msg = 'Lower than five'
     print(msg)
@@ -34,7 +34,7 @@
 ### Ternary operator
 
     x = int(input())
-    msg = 'Higher than five' if x > 5 else 'Equel or lower than five'
+    msg = 'Higher than five' if x > 5 else 'Equal or lower than five'
     print(msg)
 
 --
@@ -73,7 +73,7 @@
 --
 ### For on a string
 
-    # Make Python2 print compatibale with Python3
+    # Make Python2 print compatible with Python3
     from __future__ import print_function
 
     >>> for c in 'Hello World!':
@@ -145,7 +145,7 @@
 
 *   Colon (:) indicates start of a block
 *   Following lines are indented
-*   Function declaration doesnt specify return type
+*   Function declaration doesn't specify return type
 *   All functions return a value (None if not specified)
 *   Parameter data types are not specified either
 

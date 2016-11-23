@@ -61,7 +61,7 @@
 
 --
 
--   We can determine the varbosity of the log with `setLevel`
+-   We can determine the verbosity of the log with `setLevel`
 
         logging.root.setLevel(logging.DEBUG)
         logging.debug('Alltems operational')
@@ -235,7 +235,7 @@ processes.
 -   The caller is responsible for interpreting it to detect errors.
 
 --
-### Error handeling
+### Error handling
 
 -   The `check_call()` function works like `call()` except that the exit code is checked,
     and if it indicates an error happened then a `CalledProcessError` exception is raised.

@@ -54,7 +54,7 @@
 
 --
 
-### Spliting, joining and lists
+### Splitting, joining and lists
 *   Splitting a string according to a value
 
         'hello world'.split()  # -> ['hello', 'world']
@@ -221,7 +221,7 @@
 
 --
 
-### Lists and Refereneces
+### Lists and References
 
 When using the assignment operator (`=`) on a list, a reference is created to the original list:
 
